@@ -34,10 +34,94 @@ img {
   height: auto;
 }
 
+button {
+  border: none;
+  outline: none;
+  background-color: unset;
+}
+
 body {
   background-image: linear-gradient(to right, #3fba64, #4abd5d, #55bf55, #61c24c, #6cc443);
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Titillium Web', sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: #005639;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  max-width: 1920px;
+  margin: auto;
+  position: relative;
+  height: 60px;
+}
+
+.navbar::before {
+  display: none;
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -30px;
+  border-left: 30px solid transparent;
+  border-top: 60px solid #005639;
+}
+
+.navbar::after {
+  display: none;
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -30px;
+  border-right: 30px solid transparent;
+  border-top: 60px solid #005639;
+}
+
+.navbar-brand {
+  color: #e2f2eb;
+  font-weight: 600;
+  font-size: 21px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.color-theme-btn {
+  margin-left: auto;
+}
+
+.navbar-nav {
+  display: flex;
+}
+
+.navbar-collapse {
+  margin-left: auto;
+  display: none;
+}
+
+.navbar-toggler {
+  margin-right: auto;
+}
+
+.nav-item .nav-link {
+  color: #e2f2eb;
+  min-width: 95px;
+  display: inline-block;
+  text-align: center;
+  font-size: 21px;
 }
 
 @keyframes float {
@@ -61,6 +145,20 @@ body {
   }
 }
 
+.astro-holder {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -100px;
+}
+
+.astro-bubble {
+  display: inline-block;
+  border: 1px solid white;
+  padding: 20px 40px;
+}
+
 #AMHand {
   position: relative;
   animation-duration: 5s;
@@ -82,8 +180,32 @@ body {
   animation-direction: alternate;
   animation-play-state: running;
   width: 40%;
-  max-width: 110px;
-  top: -74px;
-  left: 5%;
+  max-width: 160px;
+}
+
+.bar {
+  width: 36px;
+  height: 4px;
+  background-color: #e2f2eb;
+  transition: 0.5s;
+  position: relative;
+}
+
+.hamburger_bar1 {
+  top: -7px;
+}
+
+.hamburger_bar2 {
+  top: 7px;
+}
+
+.click .hamburger_bar1 {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.click .hamburger_bar2 {
+  transform: rotate(45deg);
+  top: 0;
 }
 /*# sourceMappingURL=main.css.map */
