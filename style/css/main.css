@@ -34,6 +34,10 @@ img {
   height: auto;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 button {
   border: none;
   outline: none;
@@ -70,25 +74,23 @@ a {
 }
 
 .navbar::before {
-  display: none;
   content: "";
   height: 100%;
   position: absolute;
   top: 0;
-  left: -30px;
-  border-left: 30px solid transparent;
-  border-top: 60px solid #005639;
+  left: -122px;
+  border-left: 122px solid transparent;
+  border-top: 61px solid #005639;
 }
 
 .navbar::after {
-  display: none;
   content: "";
   height: 100%;
   position: absolute;
   top: 0;
-  right: -30px;
-  border-right: 30px solid transparent;
-  border-top: 60px solid #005639;
+  right: -130px;
+  border-right: 130px solid transparent;
+  border-top: 61px solid #005639;
 }
 
 .navbar-brand {
@@ -145,6 +147,10 @@ a {
   }
 }
 
+.astro-blob {
+  max-height: 125px;
+}
+
 .astro-holder {
   display: inline-block;
   position: relative;
@@ -155,8 +161,32 @@ a {
 
 .astro-bubble {
   display: inline-block;
-  border: 1px solid white;
+  background-color: #e2f2eb;
   padding: 20px 40px;
+  border-radius: 5px;
+  position: relative;
+  margin-left: -5px;
+  top: -55px;
+  animation-duration: 4s;
+  animation-name: float;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+
+.astro-bubble::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  z-index: 1;
+  border-style: solid;
+  border-width: 15px 0 0 15px;
+  border-color: transparent transparent transparent #e2f2eb;
+  top: -14px;
+  left: 15%;
+  margin-left: -10px;
 }
 
 #AMHand {
