@@ -81,5 +81,9 @@ body {
   animation-timing-function: ease-in-out;
   animation-direction: alternate;
   animation-play-state: running;
+  width: 40%;
+  max-width: 110px;
+  top: -74px;
+  left: 5%;
 }
 /*# sourceMappingURL=main.css.map */

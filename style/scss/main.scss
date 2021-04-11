@@ -51,7 +51,7 @@ body {
   }
   
   
-  svg {
+  #astronaut {
   /*   border: 1px solid red; */
     position:relative;
     animation-duration: 4s;
@@ -60,4 +60,8 @@ body {
     animation-timing-function:ease-in-out;
     animation-direction: alternate;
     animation-play-state: running;
+    width: 40%;
+    max-width: 110px;
+    top: -74px;
+    left: 5%;
   }
