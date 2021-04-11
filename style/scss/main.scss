@@ -1,5 +1,63 @@
-* {
+@import "./reset";
 
-    
-
+body {
+    background-image: linear-gradient(to right, #3fba64, #4abd5d, #55bf55, #61c24c, #6cc443);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+
+
+
+  @keyframes float {
+    from {
+      transform:translateY(0px) translateX(17px) rotate3d(0,0,1,3deg);
+    }
+  
+    to {
+       transform:scale(0.95) translateY(17px) translateX(0px) rotate3d(0,0,1,0deg);
+    }
+  }
+  
+
+  
+  @keyframes move-hand {
+    
+    20%, 100% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+   
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    10% {
+      -webkit-transform: rotate(-3deg);
+              transform: rotate(-3deg);
+    }
+  }
+  
+  
+  #AMHand {
+    position:relative;
+    animation-duration: 5s;
+    animation-name: move-hand;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-direction: alternate;
+    animation-play-state: running;
+    transform-origin: center left;
+  }
+  
+  
+  svg {
+  /*   border: 1px solid red; */
+    position:relative;
+    animation-duration: 4s;
+    animation-name: float;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-direction: alternate;
+    animation-play-state: running;
+  }
