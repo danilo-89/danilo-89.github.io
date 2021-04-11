@@ -268,3 +268,35 @@ a {
  .color-theme-btn {
 
  }
+
+
+
+ @media (min-width: 768px) {
+    body {
+      background: lightblue;
+    }
+    .color-theme-btn {
+        margin-left: unset;
+    }
+    .navbar-collapse {
+        display: block;
+    }
+    .navbar-toggler {
+        display: none;
+    }
+    .navbar-brand {
+        margin-left: unset;
+        margin-right: unset;
+    }
+}
+
+
+
+
+// .navbar-collapse {
+//     position: fixed;
+//     /* height: 100vh; */
+//     background-color: red;
+//     top: 0;
+//     bottom: 0;
+// }

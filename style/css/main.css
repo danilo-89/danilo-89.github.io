@@ -238,4 +238,23 @@ a {
   transform: rotate(45deg);
   top: 0;
 }
+
+@media (min-width: 768px) {
+  body {
+    background: lightblue;
+  }
+  .color-theme-btn {
+    margin-left: unset;
+  }
+  .navbar-collapse {
+    display: block;
+  }
+  .navbar-toggler {
+    display: none;
+  }
+  .navbar-brand {
+    margin-left: unset;
+    margin-right: unset;
+  }
+}
 /*# sourceMappingURL=main.css.map */
