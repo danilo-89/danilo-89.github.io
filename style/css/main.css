@@ -137,6 +137,7 @@ a {
   max-width: 0;
   overflow: hidden;
   transition: max-width 1s ease;
+  min-width: 60%;
 }
 
 .navbar-collapse.active .navbar-nav {
@@ -146,6 +147,7 @@ a {
 .navbar-toggler {
   margin-right: auto;
   height: 100%;
+  cursor: pointer;
 }
 
 .nav-item .nav-link {
@@ -253,6 +255,7 @@ a {
 
 .navbar-toggler.click {
   z-index: 10;
+  position: fixed;
 }
 
 .hamburger_bar1 {
@@ -291,6 +294,7 @@ a {
     position: static;
     padding-top: initial;
     max-width: unset;
+    min-width: unset;
   }
   .navbar-toggler {
     display: none;
