@@ -99,6 +99,8 @@ a {
 
 .navbar-collapse {
     max-width: 0;
+    opacity: 0;
+    overflow-x: hidden;
 }
 
 
@@ -114,6 +116,7 @@ a {
     right: 0;
     z-index: 9;
     max-width: 100%;
+    opacity: 1;
 }
 
 .navbar-nav {
@@ -259,28 +262,34 @@ a {
 
 
 
-  .bar {
-    width: 36px;
-    height: 4px;
-    background-color: #e2f2eb;
-    transition: 0.5s;
-    position: relative;
+    .bar {
+        width: 36px;
+        height: 4px;
+        background-color: #e2f2eb;
+        transition: 0.5s;
+        position: relative;
     }
+
+    .click .bar {
+        z-index: 10;
+    }
+
     .hamburger_bar1{
           top: -7px;
     }
+
      .hamburger_bar2{
           top: 7px;
      }
 
-      .click .hamburger_bar1 {
+    .click .hamburger_bar1 {
             transform: rotate(-45deg);
             top: 0;  
-      }
-      .click .hamburger_bar2{
+    }
+    .click .hamburger_bar2{
             transform: rotate(45deg);
             top: 0;  
-      }
+    }
 
 
 
@@ -306,7 +315,7 @@ a {
     }
     .navbar-collapse, .navbar-collapse.active {
         display: block;
-        
+        opacity: 1;
         margin-left: auto;
         position: static;
         background-color: transparent;
