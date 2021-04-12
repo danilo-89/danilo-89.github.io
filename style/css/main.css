@@ -145,6 +145,7 @@ a {
 
 .navbar-toggler {
   margin-right: auto;
+  height: 100%;
 }
 
 .nav-item .nav-link {
@@ -250,26 +251,21 @@ a {
   position: relative;
 }
 
-.click .bar {
+.navbar-toggler.click {
   z-index: 10;
 }
 
 .hamburger_bar1 {
-  top: -7px;
-}
-
-.hamburger_bar2 {
-  top: 7px;
+  margin-bottom: 12px;
 }
 
 .click .hamburger_bar1 {
+  margin-bottom: 0;
   transform: rotate(-45deg);
-  top: 0;
 }
 
 .click .hamburger_bar2 {
   transform: rotate(45deg);
-  top: 0;
 }
 
 @media (min-width: 768px) {

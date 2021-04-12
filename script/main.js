@@ -3,6 +3,7 @@ const navbarMain = document.getElementById("navbarMain");
 
 
 navToggleBtn.addEventListener("click", function() {
+    
     navbarMain.classList.toggle("active");
     this.classList.toggle("click");
 });
