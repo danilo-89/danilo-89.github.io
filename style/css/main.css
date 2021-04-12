@@ -73,6 +73,7 @@ a {
 }
 
 .navbar::before {
+  display: none;
   content: "";
   height: 100%;
   position: absolute;
@@ -83,6 +84,7 @@ a {
 }
 
 .navbar::after {
+  display: none;
   content: "";
   height: 100%;
   position: absolute;
@@ -254,6 +256,12 @@ a {
   .navbar-brand {
     margin-left: unset;
     margin-right: unset;
+  }
+}
+
+@media (min-width: 1921px) {
+  .navbar::before, .navbar::after {
+    display: block;
   }
 }
 

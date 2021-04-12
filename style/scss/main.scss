@@ -63,7 +63,7 @@ a {
 }
 
 .navbar::before {
-    // display: none;
+    display: none;
     content: "";
     height: 100%;
     position: absolute;
@@ -74,7 +74,7 @@ a {
 }
 
 .navbar::after {
-    // display: none;
+    display: none;
     content: "";
     height: 100%;
     position: absolute;
@@ -290,7 +290,11 @@ a {
     }
 }
 
-
+@media (min-width: 1921px) {
+    .navbar::before, .navbar::after {
+        display: block;
+    }
+}
 
 
 // .navbar-collapse {
