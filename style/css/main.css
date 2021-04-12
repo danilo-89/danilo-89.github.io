@@ -145,12 +145,6 @@ a {
   min-width: 200px;
 }
 
-.navbar-toggler {
-  margin-right: auto;
-  height: 100%;
-  cursor: pointer;
-}
-
 .nav-item .nav-link {
   color: #e2f2eb;
   min-width: 95px;
@@ -254,9 +248,16 @@ a {
   position: relative;
 }
 
+.navbar-toggler {
+  margin-right: auto;
+  height: 100%;
+  cursor: pointer;
+}
+
 .navbar-toggler.click {
   z-index: 10;
   position: fixed;
+  height: 60px;
 }
 
 .hamburger_bar1 {
