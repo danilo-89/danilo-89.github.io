@@ -126,15 +126,15 @@ a {
     height: 100%;
     position: absolute;
     padding-top: 55px;
+    min-width: 0;
     max-width: 0;
     overflow: hidden;
-    transition: max-width 1s ease;
-    min-width: 60%;
+    transition: min-width 0.4s ease-out, max-width 0.5s ease;
 }
 
 .navbar-collapse.active .navbar-nav {
     max-width: 100%;
-
+    min-width: 200px;
 }
 
 .navbar-toggler {
@@ -331,8 +331,8 @@ a {
         height: unset;
         position: static;
         padding-top: initial;
-        max-width: unset;
         min-width: unset;
+        max-width: unset;
     }
 
     .navbar-toggler {
