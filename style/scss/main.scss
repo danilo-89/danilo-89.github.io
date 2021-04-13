@@ -55,7 +55,7 @@ a {
     background-color: $navbar-color;
     display: flex;
     align-items: center;
-    padding: 5px 5px;
+    padding: 5px 0;
     max-width: 1920px;
     margin: auto;
     position: relative;
@@ -275,6 +275,7 @@ a {
         margin-right: auto;
         height: 100%;
         cursor: pointer;
+        padding-left: 10px;
     }
 
     .navbar-toggler.click {
@@ -308,7 +309,8 @@ a {
 
 
  .color-theme-btn {
-
+    padding-right: 10px;
+    display: flex;
  }
 
 
@@ -345,8 +347,8 @@ a {
         display: none;
     }
     .navbar-brand {
-        margin-left: unset;
-        margin-right: unset;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
