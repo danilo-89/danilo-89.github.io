@@ -2,12 +2,10 @@ const navToggleBtn = document.getElementById("navToggleBtn");
 const navbarMain = document.getElementById("navbarMain");
 
 // show/hide navigation on navToggleBtn click
-navToggleBtn.addEventListener("click", function() {
-    const that = this;
-    setTimeout(function(){ 
-        navbarMain.classList.toggle("active");
-        that.classList.toggle("click");
-    }, 0);
+navToggleBtn.addEventListener("click", function(event) {
+    navbarMain.classList.toggle("active");
+    this.classList.toggle("click");
+    event.stopPropagation();
 });
 
 // close navigation when clicked outside nav ul
