@@ -108,6 +108,7 @@ a {
   color: #e2f2eb;
   font-weight: 600;
   font-size: 21px;
+  padding-left: 0;
   margin-left: auto;
   margin-right: auto;
 }
@@ -149,7 +150,7 @@ a {
   min-width: 0;
   max-width: 0;
   overflow: hidden;
-  transition: min-width 0.3s ease-out, max-width 0.4s ease;
+  transition: min-width 0.2s ease-out, max-width 0.3s ease;
 }
 
 .navbar-collapse.active .navbar-nav {
@@ -266,11 +267,14 @@ a {
   cursor: pointer;
   padding-left: 10px;
   padding-right: 10px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
 }
 
 .navbar-toggler.click {
   z-index: 10;
   position: fixed;
+  transform: translateX(140px);
   top: 0;
   height: 60px;
 }
@@ -324,6 +328,7 @@ a {
     display: none;
   }
   .navbar-brand {
+    padding-left: 10px;
     margin-left: 0;
     margin-right: 0;
   }
