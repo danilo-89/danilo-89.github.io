@@ -111,7 +111,7 @@ a {
     position: fixed;
     margin-left: unset;
     /* height: 100vh; */
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
     top: 0;
     bottom: 0;
     left: 0;
@@ -206,7 +206,7 @@ a {
             display: inline-block;
             background-color: #e2f2eb;
             padding: 20px 40px;
-            border-radius: 5px;
+            border-radius: 10px;
             position: relative;
             margin-left: -5px;
             top: -55px;
@@ -395,4 +395,47 @@ h2 {
     color: white;
     text-align: center;
     font-size: 16px;
+}
+
+
+
+
+
+
+
+
+#hamburger + label {
+    color: #ccc;
+    font-style: italic;
+    
+  } 
+  #hamburger:checked + label {
+    color: #f00;
+    font-style: normal;
+    z-index: 10;
+    position: fixed;
+    transform: translateX(120px);
+    top: 10;
+    height: 60px;
+  } 
+
+  #hamburger:checked ~ .collapse.navbar-collapse {
+    display: block;
+    position: fixed;
+    margin-left: unset;
+    /* height: 100vh; */
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    max-width: 100%;
+    opacity: 1;
+    transform: scale(1);
+  } 
+
+  #hamburger:checked ~ .collapse.navbar-collapse .navbar-nav {
+    max-width: 100%;
+    min-width: 200px;
 }

@@ -17,6 +17,7 @@ navbarMain.addEventListener("click", function(event) {
 
 // hide navigation function
 function hideNav() {
-    navbarMain.classList.remove("active");
-    navToggleBtn.classList.remove("click");
+    // navbarMain.classList.remove("active");
+    // navToggleBtn.classList.remove("click");
+    document.getElementById("hamburger").checked = false;
 }
