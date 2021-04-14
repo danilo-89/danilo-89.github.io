@@ -405,8 +405,15 @@ h2 {
 
 
 #hamburger + label {
-    color: #ccc;
-    font-style: italic;
+    margin-right: auto;
+    height: 100%;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+    display: flex;
+    align-items: center;
     
   } 
   #hamburger:checked + label {
@@ -438,4 +445,27 @@ h2 {
   #hamburger:checked ~ .collapse.navbar-collapse .navbar-nav {
     max-width: 100%;
     min-width: 200px;
+}
+
+
+#hamburger:checked + label .hamburger_bar1 {
+    margin-bottom: 0;
+    transform: rotate(-45deg);
+}
+#hamburger:checked + label .hamburger_bar2{
+    transform: rotate(45deg);
+}
+
+
+/* For non-natively-focusable elements. For natively focusable elements */
+/* Use .visually-hidden:not(:focus):not(:active) */
+.visually-hidden {
+    border-width: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    white-space: nowrap !important;
+    width: 1px !important;
 }
