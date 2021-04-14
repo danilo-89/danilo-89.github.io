@@ -58,7 +58,7 @@ body {
   background-image: linear-gradient(to right, #3fba64, #4abd5d, #55bf55, #61c24c, #6cc443);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
 }
 
 .container {
@@ -176,7 +176,8 @@ a {
 }
 
 @keyframes move-hand {
-  20%, 100% {
+  20%,
+  100% {
     transform: rotate(0deg);
   }
   0% {
@@ -216,7 +217,7 @@ a {
 }
 
 .astro-bubble::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 0;
@@ -330,7 +331,8 @@ a {
   .color-theme-btn {
     margin-left: unset;
   }
-  .navbar-collapse, .navbar-collapse.active {
+  .navbar-collapse,
+  .navbar-collapse.active {
     display: block;
     opacity: 1;
     transform: scale(1);
@@ -340,7 +342,8 @@ a {
     z-index: initial;
     max-width: unset;
   }
-  .navbar-nav, .navbar-collapse.active .navbar-nav {
+  .navbar-nav,
+  .navbar-collapse.active .navbar-nav {
     flex-direction: row;
     background-color: transparent;
     height: unset;
@@ -360,7 +363,8 @@ a {
 }
 
 @media (min-width: 1921px) {
-  .navbar::before, .navbar::after {
+  .navbar::before,
+  .navbar::after {
     display: block;
   }
 }
@@ -391,6 +395,56 @@ h2 {
   color: white;
   text-align: center;
   font-size: 16px;
+}
+
+.skill {
+  width: 100%;
+  max-width: 400px;
+}
+
+.skill-description {
+  width: 54%;
+}
+
+.skill-title {
+  color: #ffffff;
+}
+
+.skill-line {
+  height: 30px;
+  width: 53%;
+  max-width: 246px;
+  border-top: 2px solid red;
+  border-left: 2px solid red;
+  transform: skew(-45deg) translateX(-18px);
+  display: inline-block;
+  position: absolute;
+}
+
+.skill-planet {
+  width: 36%;
+  float: left;
+  padding: 0 8px 0 0;
+}
+
+.skill-skills {
+  position: relative;
+  padding: 11px 5px 0 0;
+}
+
+.skill-skills span {
+  display: inline-block;
+  border: 1px solid #ffffff;
+  padding: 3px 9px;
+  margin-bottom: 5px;
+  border-radius: 31px;
+  color: #ffffff;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 /* For non-natively-focusable elements. For natively focusable elements */
