@@ -417,12 +417,12 @@ p.my-text {
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 55px;
+  margin-bottom: 45px;
   text-align: center;
 }
 
 p.quote {
-  color: #ececec;
+  color: #e2e2e2;
   width: 600px;
   max-width: 90%;
   border-radius: 10px;
