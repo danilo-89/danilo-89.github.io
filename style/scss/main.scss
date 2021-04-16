@@ -15,6 +15,7 @@ $navbar-color: #161a2d;
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 button {
@@ -372,26 +373,33 @@ section {
   position: relative;
 }
 
-.firstSection::after {
-  content: "";
-  position: absolute;
+.section-after {
   height: 30px;
   width: 100%;
-  background-image: linear-gradient(
-    to right,
-    #3fba64,
-    #4abd5d,
-    #55bf55,
-    #61c24c,
-    #6cc443
-  );
+  background: #161a2d;
   background-repeat: no-repeat;
   background-size: cover;
-  bottom: -30px;
-  left: 0;
-  border-radius: 0 0 0 100%;
-  z-index: 1;
+  position: relative;
 }
+
+.section-after::before {
+    content: '';
+    height: 30px;
+    width: 100%;
+    background-image: linear-gradient(
+        to right,
+        #3fba64,
+        #4abd5d,
+        #55bf55,
+        #61c24c,
+        #6cc443
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 0 0 0 100%;
+  }
+
 
 .section-even {
   background-color: #161a2d;
@@ -404,6 +412,7 @@ h2 {
   margin-bottom: 12px;
   font-weight: 600;
   letter-spacing: 0.030em;
+  padding-top: 15px;
 }
 
 p {
