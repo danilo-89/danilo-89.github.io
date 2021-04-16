@@ -139,7 +139,7 @@ a:visited {
   position: fixed;
   margin-left: unset;
   /* height: 100vh; */
-  background-color: rgba(108, 196, 67, 0.35);
+  background-color: rgba(108, 196, 67, 0.45);
   top: 0;
   bottom: 0;
   left: 0;
@@ -308,6 +308,7 @@ a:visited {
     height: 100%;
     cursor: pointer;
     padding-left: 10px;
+    padding-right: 5px;
     transform: translateX(0);
     transition: transform 0.3s ease-out;
 }
@@ -337,8 +338,11 @@ a:visited {
 
 .color-theme-btn {
   padding-right: 10px;
-  padding-left: 10px;
+  padding-left: 5px;
   display: flex;
+  height: 100%;
+  align-content: center;
+  align-items: center;
 }
 
 //  When width is 768px or more
