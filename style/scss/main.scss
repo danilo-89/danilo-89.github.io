@@ -146,6 +146,17 @@ a:visited {
   }
 }
 
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+
 @keyframes float {
   from {
     transform: translateY(0px) translateX(17px) rotate3d(0, 0, 1, 3deg);
@@ -390,10 +401,58 @@ h2 {
   color: white;
   text-align: center;
   font-size: 21px;
+  margin-bottom: 12px;
+  font-weight: 600;
 }
 
 p {
     color: white;
+}
+
+p.my-text {
+    width: 600px;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 55px;
+    text-align: center;
+}
+
+p.quote {
+    color: #ececec;
+    width: 600px;
+    max-width: 95%;
+    border-radius: 10px;
+    border: 1px solid #333645;
+    padding: 20px 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 55px;
+    position: relative;
+}
+
+p.quote:after {
+    content: '"';
+    position: absolute;
+    color: #5aba38;
+    right: 10px;
+    top: 0;
+    padding: 5px;
+    background-color: #161a2d;
+    display: flex;
+    height: 15px;
+    width: 15px;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px; 
+    font-style: italic;
+}
+
+p.quote span {
+    display: block;
+    text-align: right;
+    font-style: italic;
+    color: #5aba38;
 }
 
 .skills-main-wrapper {
@@ -447,6 +506,10 @@ p {
     width: 95%;
     max-width: 350px;
     margin-bottom: 15px;
+}
+
+.planet-frame:hover .skill-planet > img {
+    animation: rotation 8s infinite linear;
 }
 
 .planet-frame-bottom {
@@ -532,11 +595,11 @@ p {
 
 .planet-frame.gray .planet-frame-top {
     border-color: #b5b5b5;
-    background-image: linear-gradient(to right, #B5B5B6, transparent);
+    background-image: linear-gradient(to right, #909090, transparent);
 }
 
 .planet-frame.gray .skill-skills span {
-    border-color: #B5B5B6;
+    border-color: #909090;
 }
 
 .planet-frame-top > span {
@@ -587,6 +650,15 @@ p {
     display: table;
   }
   
+
+  hr.custom {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 3px solid #58c054;
+    width: 50px;
+    margin-bottom: 35px;
+  }
 
 /* For non-natively-focusable elements. For natively focusable elements */
 /* Use .visually-hidden:not(:focus):not(:active) */
