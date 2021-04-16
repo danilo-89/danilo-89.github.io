@@ -400,6 +400,9 @@ h2 {
 .skills-main-wrapper {
   display: flex;
   width: 100%;
+  max-width: 742px;
+  margin-left: auto;
+  margin-right: auto;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
@@ -443,6 +446,7 @@ h2 {
 .planet-frame {
   width: 95%;
   max-width: 350px;
+  margin-bottom: 15px;
 }
 
 .planet-frame-bottom {
@@ -465,10 +469,6 @@ h2 {
   height: 130px;
   width: 100%;
   background-image: linear-gradient(to right, #3b95ab, #32738e, #2b536f, #22354e, #161a2d);
-}
-
-.skill-planet > img {
-  width: 100%;
 }
 
 .skill-skills {
@@ -542,11 +542,13 @@ h2 {
   margin-top: 8px;
   display: inline-block;
   letter-spacing: 0.2em;
+  text-shadow: -1px 1px 3px rgba(22, 26, 45, 0.5);
 }
 
 .skill-planet {
   background-color: #161a2d;
   width: 130px;
+  max-width: 85%;
   padding: 15px;
   border-radius: 50%;
   display: flex;
@@ -554,6 +556,10 @@ h2 {
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.skill-planet > img {
+  width: 100%;
 }
 
 .clearfix::after {
