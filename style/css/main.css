@@ -394,7 +394,11 @@ section {
 h2 {
   color: white;
   text-align: center;
-  font-size: 16px;
+  font-size: 21px;
+}
+
+p {
+  color: white;
 }
 
 .skills-main-wrapper {
@@ -560,6 +564,12 @@ h2 {
 
 .skill-planet > img {
   width: 100%;
+}
+
+@media (min-width: 1520px) {
+  .skills-main-wrapper {
+    max-width: 1520px;
+  }
 }
 
 .clearfix::after {
