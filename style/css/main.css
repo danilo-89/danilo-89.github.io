@@ -406,10 +406,13 @@ h2 {
   font-size: 21px;
   margin-bottom: 12px;
   font-weight: 600;
+  letter-spacing: 0.030em;
 }
 
 p {
   color: white;
+  letter-spacing: 0.035em;
+  word-spacing: 0.115em;
 }
 
 p.my-text {
