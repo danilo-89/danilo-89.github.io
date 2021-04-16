@@ -154,7 +154,7 @@ a {
   position: fixed;
   margin-left: unset;
   /* height: 100vh; */
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(108, 196, 67, 0.35);
   top: 0;
   bottom: 0;
   left: 0;
@@ -305,59 +305,33 @@ a {
   position: relative;
 }
 
-.hamburger_bar1 {
-  margin-bottom: 12px;
-}
-
-#hamburger + label {
+.navbar-toggler {
   margin-right: auto;
   height: 100%;
   cursor: pointer;
   padding-left: 10px;
-  padding-right: 10px;
   transform: translateX(0);
   transition: transform 0.3s ease-out;
-  display: flex;
-  align-items: center;
 }
 
-#hamburger:checked + label {
-  color: #f00;
-  font-style: normal;
+.navbar-toggler.click {
   z-index: 10;
   position: fixed;
-  transform: translateX(120px);
-  top: 10;
+  transform: translateX(140px);
+  top: 0;
   height: 60px;
 }
 
-#hamburger:checked ~ .collapse.navbar-collapse {
-  display: block;
-  position: fixed;
-  margin-left: unset;
-  /* height: 100vh; */
-  background-color: rgba(0, 0, 0, 0.6);
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 9;
-  max-width: 100%;
-  opacity: 1;
-  transform: scale(1);
+.hamburger_bar1 {
+  margin-bottom: 12px;
 }
 
-#hamburger:checked ~ .collapse.navbar-collapse .navbar-nav {
-  max-width: 100%;
-  min-width: 200px;
-}
-
-#hamburger:checked + label .hamburger_bar1 {
+.click .hamburger_bar1 {
   margin-bottom: 0;
   transform: rotate(-45deg);
 }
 
-#hamburger:checked + label .hamburger_bar2 {
+.click .hamburger_bar2 {
   transform: rotate(45deg);
 }
 
@@ -374,8 +348,7 @@ a {
   .color-theme-btn {
     margin-left: unset;
   }
-  .navbar-collapse,
-  .navbar-collapse.active {
+  .navbar-collapse, .navbar-collapse.active {
     display: block;
     opacity: 1;
     transform: scale(1);
@@ -385,8 +358,7 @@ a {
     z-index: initial;
     max-width: unset;
   }
-  .navbar-nav,
-  .navbar-collapse.active .navbar-nav {
+  .navbar-nav, .navbar-collapse.active .navbar-nav {
     flex-direction: row;
     background-color: transparent;
     height: unset;
@@ -395,7 +367,7 @@ a {
     min-width: unset;
     max-width: unset;
   }
-  #hamburger + label {
+  .navbar-toggler {
     display: none;
   }
   .navbar-brand {
