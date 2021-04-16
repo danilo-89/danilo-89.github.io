@@ -437,6 +437,7 @@ h2 {
 }
 
 .planet-frame {
+    width: 95%;
     max-width: 350px;
 }
 
@@ -457,7 +458,7 @@ h2 {
     border: 3px solid #68d8f2;
     border-bottom: none;
     border-radius: 10px 10px 0 0;
-    height: 135px;
+    height: 130px;
     width: 100%;
     background-image: linear-gradient(to right, #3b95ab, #32738e, #2b536f, #22354e, #161a2d);
 }
@@ -486,7 +487,7 @@ h2 {
     border-color: #68d8f2;
 }
 
-.planet-frame.blue .top {
+.planet-frame.blue .planet-frame-top {
     border-color: #68d8f2;
 }
 
@@ -494,12 +495,11 @@ h2 {
     border-color: #3a90a7;
 }
 
-.planet-frame.green {
+.planet-frame.green .planet-frame-bottom {
     border-color: #5aba38;
-
 }
 
-.planet-frame.green .top {
+.planet-frame.green .planet-frame-top {
     border-color: #5aba38;
     background-image: linear-gradient(to right, #2d8856, transparent);
 }
@@ -508,11 +508,38 @@ h2 {
     border-color: #2d8455;
 }
 
+.planet-frame.yellow .planet-frame-bottom {
+    border-color: #ebd086;
+}
+
+.planet-frame.yellow .planet-frame-top {
+    border-color: #ebd086;
+    background-image: linear-gradient(to right, #dba440, transparent);
+}
+
+.planet-frame.yellow .skill-skills span {
+    border-color: #dba440;
+}
+
+.planet-frame.gray .planet-frame-bottom {
+    border-color: #b5b5b5;
+}
+
+.planet-frame.gray .planet-frame-top {
+    border-color: #b5b5b5;
+    background-image: linear-gradient(to right, #B5B5B6, transparent);
+}
+
+.planet-frame.gray .skill-skills span {
+    border-color: #B5B5B6;
+}
+
 .planet-frame-top > span {
     color: #ffffff;
     margin-top: 8px;
     display: inline-block;
     letter-spacing: 0.2em;
+    text-shadow: -1px 1px 3px rgb(22 26 45 / 50%);
 }
 
 .skill-planet {
