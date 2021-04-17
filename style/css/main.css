@@ -56,11 +56,11 @@ button {
 }
 
 body {
+  overflow-x: hidden;
   background-image: linear-gradient(to right, #3fba64, #4abd5d, #55bf55, #61c24c, #6cc443);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Titillium Web", sans-serif;
-  margin-top: 60px;
 }
 
 .container {
@@ -71,30 +71,6 @@ body {
 
 a {
   text-decoration: none;
-}
-
-.go {
-  position: relative;
-  cursor: pointer;
-}
-
-.go:after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: -2px;
-  background: #6cc443;
-  background: linear-gradient(90deg, transparent 0, #6cc443);
-  height: 3px;
-  width: 0;
-  transition: all .3s ease-out;
-  border-radius: 5px;
-}
-
-.go:hover:after {
-  width: 100%;
-  width: calc(100% + 5px);
 }
 
 .navbar {
@@ -111,7 +87,7 @@ a {
   width: 100%;
 }
 
-.navbar::before {
+.body-before::before {
   display: none;
   content: "";
   height: 100%;
@@ -122,7 +98,7 @@ a {
   border-top: 61px solid #161a2d;
 }
 
-.navbar::after {
+.body-before::after {
   display: none;
   content: "";
   height: 100%;
@@ -377,6 +353,11 @@ a {
     max-width: unset;
     min-height: 0;
   }
+  .nav-item .nav-link {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
   .navbar-collapse .navbar-nav img {
     display: none !important;
     opacity: 0;
@@ -399,6 +380,30 @@ a {
   .navbar::before,
   .navbar::after {
     display: block;
+  }
+  .body-before::before,
+  .body-before::after {
+    display: block;
+  }
+  .navbar.transparent::before {
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-color: rgba(22, 26, 45, 0.75);
+    border: none;
+    width: 100%;
+  }
+  .navbar.transparent::after {
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    background-color: rgba(22, 26, 45, 0.75);
+    border: none;
+    width: 100%;
   }
 }
 
@@ -700,11 +705,44 @@ hr.custom {
   width: 1px !important;
 }
 
+.go {
+  position: relative;
+  cursor: pointer;
+}
+
+.go::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: -2px;
+  background: #6cc443;
+  background: linear-gradient(90deg, transparent 0, #6cc443);
+  height: 3px;
+  width: 0;
+  transition: all .3s ease-out;
+  border-radius: 5px;
+}
+
+.go:hover:after {
+  width: 100%;
+  width: calc(100% + 2px);
+}
+
 .navbar.transparent {
   background-color: rgba(22, 26, 45, 0.75);
 }
 
 .nav-item .nav-link.current {
   color: #6cc444;
+}
+
+.body-before {
+  width: 100%;
+  max-width: 1920px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
 }
 /*# sourceMappingURL=main.css.map */

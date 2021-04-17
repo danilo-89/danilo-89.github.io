@@ -46,7 +46,7 @@ var sticky = header.offsetTop;
   
     window.onscroll = function() {
 
-        if (window.pageYOffset > sticky + 100) {
+        if (window.pageYOffset > sticky + 10) {
             header.classList.add("transparent");
           } else {
             header.classList.remove("transparent");
