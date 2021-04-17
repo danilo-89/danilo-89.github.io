@@ -377,6 +377,7 @@ a:visited {
     padding-top: initial;
     min-width: 0;
     max-width: unset;
+    min-height: 0;
 }
 
 .navbar-collapse .navbar-nav img {
@@ -729,5 +730,5 @@ p.quote span {
 
 
 .navbar.transparent {
-    background-color: rgba(22, 26, 45, 0.6);
+    background-color: rgba(22, 26, 45, 0.75);
 }
