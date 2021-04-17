@@ -178,7 +178,12 @@ a {
   transition: min-width 0.2s ease-out, max-width 0.3s ease;
 }
 
-.navbar-nav img {
+.navbar-collapse .navbar-nav img {
+  display: none;
+}
+
+.navbar-collapse.active .navbar-nav img {
+  display: block;
   position: absolute;
   bottom: 0;
   right: -88%;
@@ -189,6 +194,7 @@ a {
 .navbar-collapse.active .navbar-nav {
   max-width: 100%;
   min-width: 200px;
+  min-height: 410px;
 }
 
 .nav-item .nav-link {
@@ -350,12 +356,12 @@ a {
     background: lightblue;
   }
   .color-theme-btn {
-    margin-left: unset;
+    margin-left: auto;
   }
   .navbar-collapse, .navbar-collapse.active {
-    display: block;
-    opacity: 1;
-    transform: scale(1);
+    display: none;
+    opacity: 0;
+    transform: scale(0);
     margin-left: auto;
     position: static;
     background-color: transparent;
@@ -368,8 +374,8 @@ a {
     height: unset;
     position: static;
     padding-top: initial;
-    min-width: unset;
-    max-width: unset;
+    min-width: 0;
+    max-width: 0;
   }
   .navbar-toggler {
     display: none;
