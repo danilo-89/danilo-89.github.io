@@ -25,21 +25,41 @@ function hideNav() {
 
 
 
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
 
 // Get the header
 var header = document.getElementById("navBar");
 var body = document.getElementsByTagName('body')[0];
 
-// Get the offset position of the navbar
 var sticky = header.offsetTop;
 
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset > sticky + 100) {
-    header.classList.add("transparent");
-  } else {
-    header.classList.remove("transparent");
-  }
-}
+
+
+(function() {
+  
+    var section = document.querySelectorAll(".section");
+    var sections = {};
+    var i = 0;
+  
+    Array.prototype.forEach.call(section, function(e) {
+      sections[e.id] = e.offsetTop;
+    });
+  
+    window.onscroll = function() {
+
+        if (window.pageYOffset > sticky + 100) {
+            header.classList.add("transparent");
+          } else {
+            header.classList.remove("transparent");
+          }
+
+
+      var scrollPosition = 60 + document.documentElement.scrollTop || 60 + document.body.scrollTop;
+  
+      for (i in sections) {
+        if (sections[i] <= scrollPosition) {
+          document.querySelector('.current').classList.remove("current");
+          document.querySelector('a[href*=' + i + ']').classList.add("current");
+        }
+      }
+    };
+  })();

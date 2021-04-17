@@ -703,4 +703,8 @@ hr.custom {
 .navbar.transparent {
   background-color: rgba(22, 26, 45, 0.75);
 }
+
+.nav-item .nav-link.current {
+  color: #6cc444;
+}
 /*# sourceMappingURL=main.css.map */
