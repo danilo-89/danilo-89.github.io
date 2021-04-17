@@ -60,6 +60,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Titillium Web", sans-serif;
+  margin-top: 60px;
 }
 
 .container {
@@ -103,8 +104,11 @@ a {
   padding: 5px 0;
   max-width: 1920px;
   margin: auto;
-  position: relative;
+  position: fixed;
   height: 60px;
+  z-index: 1;
+  top: 0;
+  width: 100%;
 }
 
 .navbar::before {
@@ -168,7 +172,7 @@ a {
 .navbar-nav {
   display: flex;
   flex-direction: column;
-  background-color: black;
+  background-color: #161a2d;
   height: 100%;
   position: absolute;
   padding-top: 55px;
@@ -387,6 +391,10 @@ a {
 }
 
 @media (min-width: 1921px) {
+  .navbar {
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .navbar::before,
   .navbar::after {
     display: block;
@@ -689,5 +697,9 @@ hr.custom {
   position: absolute !important;
   white-space: nowrap !important;
   width: 1px !important;
+}
+
+.navbar.transparent {
+  background-color: rgba(22, 26, 45, 0.6);
 }
 /*# sourceMappingURL=main.css.map */

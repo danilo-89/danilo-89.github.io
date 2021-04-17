@@ -22,3 +22,24 @@ function hideNav() {
     // console.log("rest");
     // document.getElementById("hamburger").checked = false;
 }
+
+
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("navBar");
+var body = document.getElementsByTagName('body')[0];
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky + 100) {
+    header.classList.add("transparent");
+  } else {
+    header.classList.remove("transparent");
+  }
+}
