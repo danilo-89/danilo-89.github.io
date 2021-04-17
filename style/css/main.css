@@ -180,9 +180,9 @@ a {
 
 .navbar-nav img {
   position: absolute;
-  bottom: -43%;
-  right: -92%;
-  transform: translate(-50%, -50%) scaleX(-1);
+  bottom: 0;
+  right: -88%;
+  transform: translate(-50%, 44%) scaleX(-1);
   width: 100%;
 }
 
