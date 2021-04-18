@@ -73,8 +73,23 @@ a {
   text-decoration: none;
 }
 
+.btn-standard {
+  background-color: #58c054;
+  padding: 7px 23px;
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 600;
+  min-width: 110px;
+  transition: all 0.3 ease;
+}
+
+.btn-standard:hover {
+  background-color: #4aa846;
+}
+
 .navbar {
-  background-color: #161a2d;
+  background-color: transparent;
   display: flex;
   align-items: center;
   padding: 5px 0;
@@ -210,6 +225,30 @@ a {
   10% {
     transform: rotate(-3deg);
   }
+}
+
+.firstSection {
+  min-height: calc(100vh - 90px);
+}
+
+.arrow-go-down {
+  position: relative;
+  width: 70px;
+  margin: auto;
+  transform: translateY(20px);
+  z-index: 1;
+}
+
+.arrow-go-down a {
+  display: block;
+}
+
+.arrow-go-down svg {
+  fill: rgba(255, 255, 255, 0.2);
+}
+
+.arrow-go-down:hover svg {
+  fill: rgba(255, 255, 255, 0.4);
 }
 
 .astro-blob {
@@ -505,7 +544,7 @@ p.quote span {
 .section-container {
   display: flex;
   width: 100%;
-  max-width: 742px;
+  max-width: 768px;
   margin-left: auto;
   margin-right: auto;
   flex-wrap: wrap;
@@ -539,6 +578,77 @@ p.quote span {
 
 .project-frame-inside {
   background-color: #161a2d;
+  border-radius: 10px;
+}
+
+.project-galery {
+  padding: 12px;
+}
+
+.project-galery img {
+  display: block;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+
+.project-description {
+  position: relative;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.project-description img {
+  position: absolute;
+  bottom: 0;
+  right: -57%;
+  transform: translate(-50%, 44%) scaleX(-1);
+  width: 65%;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.project-ingridients {
+  color: #58c054;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.project-ingridients span:not(:last-of-type) {
+  padding-right: 10px;
+}
+
+.project-title {
+  font-size: 19.2px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.project-about {
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 22px;
+  min-height: 105px;
+}
+
+.project-about span {
+  display: block;
+  font-size: 14px;
+  padding-bottom: 4px;
+}
+
+.project-buttons {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 15px;
+}
+
+.project-buttons .btn-standard {
+  width: 43%;
 }
 
 .planet-frame:hover .skill-planet > img {
