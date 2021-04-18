@@ -171,6 +171,14 @@ a {
   margin-bottom: 25px;
 }
 
+.btn-standard.cv-download {
+  background-color: transparent;
+  color: #58c054;
+  border-bottom: 2px solid #58c054;
+  min-width: 150px;
+  margin-bottom: 25px;
+}
+
 .btn-standard:hover {
   background-color: #4aa846;
   color: #ffffff;
