@@ -44,6 +44,70 @@ button {
   outline: inherit;
 }
 
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0px) translateX(17px) rotate3d(0, 0, 1, 3deg);
+  }
+  to {
+    transform: scale(0.95) translateY(17px) translateX(0px) rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@keyframes move-hand {
+  20%,
+  100% {
+    transform: rotate(0deg);
+  }
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes blinkColor {
+  0% {
+    fill: #161a2d;
+  }
+  60% {
+    fill: #161a2d;
+  }
+  70% {
+    fill: #4ece79;
+  }
+  86% {
+    fill: #161a2d;
+  }
+  100% {
+    fill: #4ece79;
+  }
+}
+
+@keyframes changeText {
+  0% {
+    content: "Welcome friend...";
+  }
+  33% {
+    content: "hope you are well...";
+  }
+  66% {
+    content: "feel free to look around and...";
+  }
+  100% {
+    content: "Have a nice stay!";
+  }
+}
+
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -108,18 +172,14 @@ a {
   background-color: #4aa846;
 }
 
-.navbar {
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  padding: 5px 0;
-  max-width: 1920px;
-  margin: auto;
-  position: fixed;
-  height: 60px;
-  z-index: 2;
-  top: 0;
+.body-before {
   width: 100%;
+  max-width: 1920px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background-color: #161a2d;
 }
 
 .body-before::before {
@@ -144,6 +204,64 @@ a {
   border-top: 61px solid #161a2d;
 }
 
+.color-theme-btn {
+  margin-left: auto;
+  padding-right: 10px;
+  padding-left: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-width: 51px;
+}
+
+.color-theme-btn svg {
+  flex: 1 0 100%;
+  transition: all 1s ease-out;
+}
+
+.color-theme-btn svg.switch-moon {
+  max-height: 100%;
+  opacity: 1;
+  margin-bottom: 15px;
+}
+
+.color-theme-btn svg.switch-sun {
+  max-height: 0%;
+  opacity: 0.2;
+}
+
+.color-theme-btn.sun svg.switch-moon {
+  max-height: 0%;
+  opacity: 0.2;
+  margin-bottom: 0;
+}
+
+.color-theme-btn.sun svg.switch-sun {
+  max-height: 100%;
+  opacity: 1;
+}
+
+.navbar {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  max-width: 1920px;
+  margin: auto;
+  position: fixed;
+  height: 60px;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+}
+
+.navbar.transparent {
+  background-color: rgba(22, 26, 45, 0.75);
+}
+
 .navbar-brand {
   color: #e2f2eb;
   font-weight: 600;
@@ -151,10 +269,6 @@ a {
   padding-left: 0;
   margin-left: auto;
   margin-right: auto;
-}
-
-.color-theme-btn {
-  margin-left: auto;
 }
 
 .navbar-collapse {
@@ -180,6 +294,12 @@ a {
   transform: scale(1);
 }
 
+.navbar-collapse.active .navbar-nav {
+  max-width: 100%;
+  min-width: 200px;
+  min-height: 410px;
+}
+
 .navbar-nav {
   display: flex;
   flex-direction: column;
@@ -201,12 +321,6 @@ a {
   width: 100%;
 }
 
-.navbar-collapse.active .navbar-nav {
-  max-width: 100%;
-  min-width: 200px;
-  min-height: 410px;
-}
-
 .nav-item .nav-link {
   color: #e2f2eb;
   min-width: 95px;
@@ -216,68 +330,8 @@ a {
   padding-left: 17px;
 }
 
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-
-@keyframes float {
-  from {
-    transform: translateY(0px) translateX(17px) rotate3d(0, 0, 1, 3deg);
-  }
-  to {
-    transform: scale(0.95) translateY(17px) translateX(0px) rotate3d(0, 0, 1, 0deg);
-  }
-}
-
-@keyframes move-hand {
-  20%,
-  100% {
-    transform: rotate(0deg);
-  }
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(-3deg);
-  }
-}
-
-@keyframes blinkColor {
-  0% {
-    fill: #161a2d;
-  }
-  60% {
-    fill: #161a2d;
-  }
-  70% {
-    fill: #4ECE79;
-  }
-  86% {
-    fill: #161a2d;
-  }
-  100% {
-    fill: #4ECE79;
-  }
-}
-
-@keyframes changeText {
-  0% {
-    content: 'Welcome friend...';
-  }
-  33% {
-    content: 'hope you are well...';
-  }
-  66% {
-    content: 'feel free to look around and...';
-  }
-  100% {
-    content: 'Have a nice stay!';
-  }
+.nav-item .nav-link.current {
+  color: #6cc444;
 }
 
 .st4.blink-color {
@@ -341,11 +395,6 @@ a {
   min-height: 71px;
 }
 
-.astro-bubble span::after {
-  content: "Welcome";
-  animation: changeText 14s linear forwards;
-}
-
 .astro-bubble::after {
   content: "";
   position: absolute;
@@ -360,6 +409,11 @@ a {
   margin-left: -10px;
 }
 
+.astro-bubble span::after {
+  content: "Welcome";
+  animation: changeText 14s linear forwards;
+}
+
 #AMHand {
   position: relative;
   animation-duration: 5s;
@@ -372,7 +426,6 @@ a {
 }
 
 #astronaut {
-  /*   border: 1px solid red; */
   position: relative;
   animation-duration: 4s;
   animation-name: float;
@@ -423,48 +476,12 @@ a {
   transform: rotate(45deg);
 }
 
-.color-theme-btn {
-  padding-right: 10px;
-  padding-left: 5px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  align-content: center;
-  align-items: center;
-  overflow-x: hidden;
-  max-width: 51px;
-}
-
-.color-theme-btn svg {
-  flex: 1 0 100%;
-  transition: all 1.2s ease-out;
-}
-
-.color-theme-btn svg.switch-moon {
-  max-height: 100%;
-  opacity: 1;
-}
-
-.color-theme-btn svg.switch-sun {
-  max-height: 0%;
-  opacity: 0.2;
-}
-
-.color-theme-btn.sun svg.switch-moon {
-  max-height: 0%;
-  opacity: 0.2;
-}
-
-.color-theme-btn.sun svg.switch-sun {
-  max-height: 100%;
-  opacity: 1;
-}
-
 @media (min-width: 768px) {
   .color-theme-btn {
     margin-left: unset;
   }
-  .navbar-collapse, .navbar-collapse.active {
+  .navbar-collapse,
+  .navbar-collapse.active {
     display: block;
     opacity: 1;
     transform: scale(1);
@@ -474,7 +491,8 @@ a {
     z-index: initial;
     max-width: unset;
   }
-  .navbar-nav, .navbar-collapse.active .navbar-nav {
+  .navbar-nav,
+  .navbar-collapse.active .navbar-nav {
     flex-direction: row;
     background-color: transparent;
     height: unset;
@@ -508,12 +526,7 @@ a {
     left: 50%;
     transform: translateX(-50%);
   }
-  .navbar::before,
-  .navbar::after {
-    display: block;
-  }
-  .body-before::before,
-  .body-before::after {
+  .navbar::before, .navbar::after {
     display: block;
   }
   .navbar.transparent::before {
@@ -536,6 +549,10 @@ a {
     border: none;
     width: 100%;
   }
+  .body-before::before,
+  .body-before::after {
+    display: block;
+  }
 }
 
 section {
@@ -557,7 +574,7 @@ section {
 }
 
 .section-after::before {
-  content: '';
+  content: "";
   height: 30px;
   width: 100%;
   background-image: linear-gradient(to right, #3fba64, #4abd5d, #55bf55, #61c24c, #6cc443);
@@ -581,7 +598,7 @@ h2 {
   font-size: 21px;
   margin-bottom: 12px;
   font-weight: 600;
-  letter-spacing: 0.030em;
+  letter-spacing: 0.03em;
   padding-top: 15px;
 }
 
@@ -618,7 +635,7 @@ p.quote {
   position: relative;
 }
 
-p.quote:after {
+p.quote::after {
   content: '"';
   position: absolute;
   color: #5aba38;
@@ -663,12 +680,6 @@ p.quote span {
 
 .skill-title {
   color: #ffffff;
-}
-
-.planet-frame {
-  width: 95%;
-  max-width: 350px;
-  margin-bottom: 15px;
 }
 
 .project-frame {
@@ -752,45 +763,14 @@ p.quote span {
   width: 43%;
 }
 
+.planet-frame {
+  width: 95%;
+  max-width: 350px;
+  margin-bottom: 15px;
+}
+
 .planet-frame:hover .skill-planet > img {
   animation: rotation 8s infinite linear;
-}
-
-.planet-frame-bottom {
-  border: 3px solid #68d8f2;
-  border-radius: 0 0 10px 10px;
-  position: relative;
-  min-height: 250px;
-  width: 95%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.planet-frame-top {
-  text-align: center;
-  border: 3px solid #68d8f2;
-  border-bottom: none;
-  border-radius: 10px 10px 0 0;
-  height: 130px;
-  width: 100%;
-  background-image: linear-gradient(to right, #3b95ab, #32738e, #2b536f, #22354e, #161a2d);
-}
-
-.skill-skills {
-  position: relative;
-  padding: 11px 5px 0 5px;
-  text-align: center;
-}
-
-.skill-skills span {
-  display: inline-block;
-  border: 1px solid #3a90a7;
-  padding: 3px 9px;
-  margin-bottom: 5px;
-  border-radius: 31px;
-  color: #ffffff;
 }
 
 .planet-frame.blue {
@@ -844,12 +824,49 @@ p.quote span {
   border-color: #909090;
 }
 
+.planet-frame-bottom {
+  border: 3px solid #68d8f2;
+  border-radius: 0 0 10px 10px;
+  position: relative;
+  min-height: 250px;
+  width: 95%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.planet-frame-top {
+  text-align: center;
+  border: 3px solid #68d8f2;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  height: 130px;
+  width: 100%;
+  background-image: linear-gradient(to right, #3b95ab, #32738e, #2b536f, #22354e, #161a2d);
+}
+
 .planet-frame-top > span {
   color: #ffffff;
   margin-top: 8px;
   display: inline-block;
   letter-spacing: 0.2em;
   text-shadow: -1px 1px 3px rgba(22, 26, 45, 0.5);
+}
+
+.skill-skills {
+  position: relative;
+  padding: 11px 5px 0 5px;
+  text-align: center;
+}
+
+.skill-skills.skill-skills span {
+  display: inline-block;
+  border: 1px solid #3a90a7;
+  padding: 3px 9px;
+  margin-bottom: 5px;
+  border-radius: 31px;
+  color: #ffffff;
 }
 
 .skill-planet {
@@ -907,19 +924,6 @@ hr.custom {
   margin-bottom: 35px;
 }
 
-/* For non-natively-focusable elements. For natively focusable elements */
-/* Use .visually-hidden:not(:focus):not(:active) */
-.visually-hidden {
-  border-width: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px) !important;
-  height: 1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  white-space: nowrap !important;
-  width: 1px !important;
-}
-
 .go {
   position: relative;
   cursor: pointer;
@@ -935,7 +939,7 @@ hr.custom {
   background: linear-gradient(90deg, transparent 0, #6cc443);
   height: 3px;
   width: 0;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
   border-radius: 5px;
 }
 
@@ -944,21 +948,16 @@ hr.custom {
   width: calc(100% + 2px);
 }
 
-.navbar.transparent {
-  background-color: rgba(22, 26, 45, 0.75);
-}
-
-.nav-item .nav-link.current {
-  color: #6cc444;
-}
-
-.body-before {
-  width: 100%;
-  max-width: 1920px;
-  height: 60px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  background-color: #161a2d;
+/* For non-natively-focusable elements. For natively focusable elements */
+/* Use .visually-hidden:not(:focus):not(:active) */
+.visually-hidden {
+  border-width: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
 }
 /*# sourceMappingURL=main.css.map */
