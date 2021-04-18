@@ -537,11 +537,7 @@ p.quote span {
   margin-bottom: 15px;
 }
 
-.project-frame-top {
-  background-color: #161a2d;
-}
-
-.project-frame-bottom {
+.project-frame-inside {
   background-color: #161a2d;
 }
 
@@ -729,5 +725,6 @@ hr.custom {
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  background-color: #161a2d;
 }
 /*# sourceMappingURL=main.css.map */
