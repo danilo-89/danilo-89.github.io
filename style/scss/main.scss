@@ -511,7 +511,7 @@ p.quote span {
     color: #5aba38;
 }
 
-.skills-main-wrapper {
+.section-container {
     display: flex;
     width: 100%;
     max-width: 742px;
@@ -535,33 +535,20 @@ p.quote span {
     color: #ffffff;
 }
 
-.skill-line {
-    height: 30px;
-    width: 53%;
-    max-width: 246px;
-    border-top: 2px solid red;
-    border-left: 2px solid red;
-    transform: skew(-45deg) translateX(-18px);
-    display: inline-block;
-    position: absolute;
-    z-index: 1;
-}
-
-.skill-line-dot {
-    position: absolute;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    left: -5px;
-    bottom: -4px;
-    background-color: rgba(255, 255, 255, 0.5);
-    transform: skew(45deg) translateX(0);
-}
-
 .planet-frame {
     width: 95%;
     max-width: 350px;
     margin-bottom: 15px;
+}
+
+.project-frame {
+    width: 95%;
+    max-width: 350px;
+    margin-bottom: 15px;
+}
+
+.project-frame-inside {
+        background-color: #161a2d;
 }
 
 .planet-frame:hover .skill-planet > img {
@@ -691,9 +678,9 @@ p.quote span {
 
 
 @media (min-width: 1520px) {
-    .skills-main-wrapper {
-      max-width: 1520px;
-  }
+//     .skills-main-wrapper {
+//       max-width: 1520px;
+//   }
 }
 
 
