@@ -51,8 +51,6 @@ a:active {
 a:visited {
 }
 
-
-
 .btn-standard {
     background-color: #58c054;
     padding: 7px 23px;
@@ -61,7 +59,27 @@ a:visited {
     font-size: 19px;
     font-weight: 600;
     min-width: 110px;
-    transition: all 0.3 ease;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-standard.github {
+    background-color: #6a737d;
+    min-width: 150px;
+    margin-bottom: 15px;
+}
+
+.btn-standard.linkedin {
+    background-color: #0a66c2;
+    min-width: 150px;
+    margin-bottom: 15px;
+}
+
+.btn-standard.email {
+    background-color: transparent;
+    border: 2px solid #58c054;
+    min-width: 150px;
+    margin-bottom: 25px;
 }
 
 .btn-standard:hover {
@@ -450,19 +468,42 @@ section {
   position: relative;
 }
 
-.section-after {
-  height: 30px;
-  width: 100%;
-  background: #161a2d;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+.section-even {
+  background-color: #161a2d;
 }
 
-.section-after::before {
-    content: '';
+.section-after {
     height: 30px;
     width: 100%;
+    background: #161a2d;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .section-after::before {
+      content: '';
+      height: 30px;
+      width: 100%;
+      background-image: linear-gradient(
+          to right,
+          #3fba64,
+          #4abd5d,
+          #55bf55,
+          #61c24c,
+          #6cc443
+      );
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 0 0 0 100%;
+    }
+
+.section-even + .section-after::before {
+    background: #161a2d;
+}
+
+.section-even + .section-after {
     background-image: linear-gradient(
         to right,
         #3fba64,
@@ -471,14 +512,6 @@ section {
         #61c24c,
         #6cc443
     );
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 0 0 0 100%;
-  }
-
-.section-even {
-  background-color: #161a2d;
 }
 
 h2 {
@@ -780,7 +813,27 @@ p.quote span {
 
 
 
+.astro-cat-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    width: 160px;
+}
 
+.astro-cat-container > img {
+    animation-duration: 4s;
+    animation-name: float;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
 
