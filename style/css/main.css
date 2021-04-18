@@ -193,10 +193,10 @@ a {
 
 .project-buttons .btn-standard {
   width: 43%;
-  background-color: #161a2d;
+  background-color: rgba(22, 26, 45, 0.5);
   color: #ffffff;
-  border-bottom: 2px solid #7f968a;
-  border-top: 2px solid #57bd53;
+  border-bottom: 2px solid #6ac446;
+  border-top: 2px solid #324c65;
   padding: 5px 23px;
 }
 
