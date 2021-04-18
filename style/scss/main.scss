@@ -149,6 +149,20 @@ a {
   &:hover {
     background-color: #4aa846;
     color: #ffffff;
+    .project-buttons & {
+        background-color: #4aa846;
+        color: #ffffff;
+        border-top: 2px solid #58c054;
+        border-bottom: 2px solid #58c054;
+    }
+  }
+  .project-buttons & {
+    width: 43%;
+    background-color: #161a2d;
+    color: #ffffff;
+    border-bottom: 2px solid #7f968a;
+    border-top: 2px solid #57bd53;
+    padding: 5px 23px;
   }
 }
 
@@ -741,9 +755,6 @@ p {
   margin-bottom: 15px;
 }
 
-.project-buttons .btn-standard {
-  width: 43%;
-}
 
 .planet-frame {
   width: 95%;
