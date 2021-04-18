@@ -247,6 +247,46 @@ a {
   }
 }
 
+@keyframes blinkColor {
+  0% {
+    fill: #161a2d;
+  }
+  60% {
+    fill: #161a2d;
+  }
+  70% {
+    fill: #4ECE79;
+  }
+  86% {
+    fill: #161a2d;
+  }
+  100% {
+    fill: #4ECE79;
+  }
+}
+
+@keyframes changeText {
+  0% {
+    content: 'Welcome friend...';
+  }
+  33% {
+    content: 'hope you are well...';
+  }
+  66% {
+    content: 'feel free to look around and...';
+  }
+  100% {
+    content: 'have a really nice day!';
+  }
+}
+
+.st4.blink-color {
+  animation: blinkColor ease-in;
+  animation-iteration-count: infinite;
+  animation-duration: 5.5s;
+  animation-fill-mode: both;
+}
+
 .firstSection {
   min-height: calc(100vh - 90px);
 }
@@ -286,7 +326,7 @@ a {
 .astro-bubble {
   display: inline-block;
   background-color: #e2f2eb;
-  padding: 20px 40px;
+  padding: 20px 18px;
   border-radius: 10px;
   position: relative;
   margin-left: -5px;
@@ -297,6 +337,13 @@ a {
   animation-timing-function: ease-in-out;
   animation-direction: alternate;
   animation-play-state: running;
+  width: 144px;
+  min-height: 71px;
+}
+
+.astro-bubble span::after {
+  content: "Welcome";
+  animation: changeText 14s linear forwards;
 }
 
 .astro-bubble::after {
@@ -816,6 +863,7 @@ p.quote span {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 20px;
 }
 
 .clearfix::after {
