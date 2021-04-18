@@ -1,5 +1,12 @@
 const navToggleBtn = document.getElementById("navToggleBtn");
+const changeColorThemeBtn = document.getElementById("changeColorThemeBtn");
 const navbarMain = document.getElementById("navbarMain");
+
+
+// togle color theme dark/light
+changeColorThemeBtn.addEventListener("click", function(event) {
+    this.classList.toggle("sun");
+});
 
 // show/hide navigation on navToggleBtn click
 navToggleBtn.addEventListener("click", function(event) {

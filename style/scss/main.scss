@@ -42,14 +42,14 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-}
+// a:hover {
+// }
 
-a:active {
-}
+// a:active {
+// }
 
-a:visited {
-}
+// a:visited {
+// }
 
 .btn-standard {
     background-color: #58c054;
@@ -259,7 +259,7 @@ a:visited {
     0% {content: 'Welcome friend...'}
     33% { content: 'hope you are well...' }
     66% { content: 'feel free to look around and...' }
-    100% { content: 'have a really nice day!' }
+    100% { content: 'Have a nice stay!' }
 }
 
 .st4.blink-color {
@@ -398,8 +398,8 @@ a:visited {
     margin-bottom: 12px;
 }
 
- .hamburger_bar2{
- }
+//  .hamburger_bar2{
+//  }
 
 .click .hamburger_bar1 {
         margin-bottom: 0;
@@ -413,16 +413,40 @@ a:visited {
   padding-right: 10px;
   padding-left: 5px;
   display: flex;
+  flex-direction: column;
+//   flex-wrap: wrap;
   height: 100%;
   align-content: center;
   align-items: center;
+  overflow-x: hidden;
+  max-width: 51px;
+}
+
+.color-theme-btn svg {
+    flex: 1 0 100%;
+    transition: all 1.2s ease-out;
+}
+
+.color-theme-btn svg.switch-moon {
+    max-height: 100%;
+    opacity: 1;
+}
+.color-theme-btn svg.switch-sun {
+    max-height: 0%;
+    opacity: 0.2;
+}
+
+.color-theme-btn.sun svg.switch-moon {
+    max-height: 0%;
+    opacity: 0.2;
+}
+.color-theme-btn.sun svg.switch-sun {
+    max-height: 100%;
+    opacity: 1;
 }
 
 //  When width is 768px or more
 @media (min-width: 768px) {
-  body {
-    background: lightblue;
-  }
   .color-theme-btn {
     margin-left: unset;
   }
@@ -855,7 +879,7 @@ p.quote span {
 .astro-cat-container {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     width: 160px;
 }
 
