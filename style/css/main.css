@@ -332,6 +332,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
+  width: 100%;
   max-width: 51px;
 }
 
@@ -344,23 +345,27 @@ a {
 }
 
 .color-theme-btn svg.switch-moon {
+  height: 100%;
   max-height: 100%;
   opacity: 1;
   margin-bottom: 15px;
 }
 
 .color-theme-btn svg.switch-sun {
+  height: 0;
   max-height: 0%;
-  opacity: 0.2;
+  opacity: 0;
 }
 
 .color-theme-btn.sun svg.switch-moon {
+  height: 0;
   max-height: 0%;
   opacity: 0.2;
   margin-bottom: 0;
 }
 
 .color-theme-btn.sun svg.switch-sun {
+  height: 100%;
   max-height: 100%;
   opacity: 1;
 }
@@ -454,6 +459,7 @@ a {
   right: -88%;
   -webkit-transform: translate(-50%, 44%) scaleX(-1);
           transform: translate(-50%, 44%) scaleX(-1);
+  height: 100%;
   width: 100%;
 }
 
@@ -660,7 +666,8 @@ a {
     position: static;
     background-color: transparent;
     z-index: initial;
-    max-width: unset;
+    max-width: 100%;
+    max-height: 48px;
   }
   .navbar-nav,
   .navbar-collapse.active .navbar-nav {
@@ -671,9 +678,9 @@ a {
     background-color: transparent;
     height: unset;
     position: static;
-    padding-top: initial;
+    padding-top: 0;
     min-width: 0;
-    max-width: unset;
+    max-width: 100%;
     min-height: 0;
   }
   .nav-item .nav-link {
@@ -852,9 +859,11 @@ p.quote span {
   margin-right: auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  /*for ie*/
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  /*for moz & chrome*/
+  -webkit-justify-content: space-evenly !important;
 }
 
 .skill {
@@ -946,9 +955,11 @@ p.quote span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  /*for ie*/
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  /*for moz & chrome*/
+  -webkit-justify-content: space-evenly !important;
   margin-bottom: 15px;
 }
 
@@ -1021,6 +1032,7 @@ p.quote span {
   border: 3px solid #68d8f2;
   border-radius: 0 0 10px 10px;
   position: relative;
+  height: 10%;
   min-height: 250px;
   width: 95%;
   width: 100%;

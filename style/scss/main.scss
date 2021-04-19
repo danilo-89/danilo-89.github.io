@@ -150,10 +150,10 @@ a {
     background-color: #4aa846;
     color: #ffffff;
     .project-buttons & {
-        background-color: #4aa846;
-        color: #ffffff;
-        border-top: 2px solid #58c054;
-        border-bottom: 2px solid #58c054;
+      background-color: #4aa846;
+      color: #ffffff;
+      border-top: 2px solid #58c054;
+      border-bottom: 2px solid #58c054;
     }
   }
   .project-buttons & {
@@ -197,7 +197,7 @@ a {
 }
 
 .color-theme-btn {
-  margin-left: auto; 
+  margin-left: auto;
   padding-right: 10px;
   padding-left: 5px;
   display: flex;
@@ -206,27 +206,32 @@ a {
   align-content: center;
   align-items: center;
   overflow: hidden;
+  width: 100%;
   max-width: 51px;
   svg {
     flex: 1 0 100%;
     transition: all 1s ease-out;
     &.switch-moon {
+      height: 100%;
       max-height: 100%;
       opacity: 1;
       margin-bottom: 15px;
     }
     &.switch-sun {
+      height: 0;
       max-height: 0%;
-      opacity: 0.2;
+      opacity: 0;
     }
   }
   &.sun {
     svg.switch-moon {
+      height: 0;
       max-height: 0%;
       opacity: 0.2;
       margin-bottom: 0;
     }
     svg.switch-sun {
+      height: 100%;
       max-height: 100%;
       opacity: 1;
     }
@@ -303,6 +308,7 @@ a {
     bottom: 0;
     right: -88%;
     transform: translate(-50%, 44%) scaleX(-1);
+    height: 100%;
     width: 100%;
   }
 }
@@ -473,7 +479,8 @@ a {
     position: static;
     background-color: transparent;
     z-index: initial;
-    max-width: unset;
+    max-width: 100%;
+    max-height: 48px;
   }
   .navbar-nav,
   .navbar-collapse.active .navbar-nav {
@@ -481,9 +488,9 @@ a {
     background-color: transparent;
     height: unset;
     position: static;
-    padding-top: initial;
+    padding-top: 0;
     min-width: 0;
-    max-width: unset;
+    max-width: 100%;
     min-height: 0;
   }
 
@@ -662,7 +669,10 @@ p {
   margin-left: auto;
   margin-right: auto;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  /*for ie*/
+  justify-content: space-around;
+  /*for moz & chrome*/
+  -webkit-justify-content: space-evenly !important;
 }
 
 .skill {
@@ -752,10 +762,12 @@ p {
   position: relative;
   z-index: 0;
   display: flex;
-  justify-content: space-evenly;
+  /*for ie*/
+  justify-content: space-around;
+  /*for moz & chrome*/
+  -webkit-justify-content: space-evenly !important;
   margin-bottom: 15px;
 }
-
 
 .planet-frame {
   width: 95%;
@@ -808,6 +820,7 @@ p {
   border: 3px solid #68d8f2;
   border-radius: 0 0 10px 10px;
   position: relative;
+  height: 10%;
   min-height: 250px;
   width: 95%;
   width: 100%;
@@ -941,7 +954,7 @@ hr.custom {
 }
 
 // .cryptedmail:after {
-//     content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
+//     content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
 // }
 
 /* For non-natively-focusable elements. For natively focusable elements */
