@@ -267,6 +267,10 @@ body.light {
   fill: var(--color-dark) !important;
 }
 
+.light .st4 {
+  fill: #185167 !important;
+}
+
 .container {
   max-width: 1920px;
   margin-left: auto;
@@ -665,6 +669,11 @@ a {
   max-width: 160px;
 }
 
+.light #astronaut {
+  -webkit-filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.1));
+}
+
 .bar {
   width: 36px;
   height: 4px;
@@ -1044,7 +1053,7 @@ p.quote span {
 }
 
 .light .planet-frame {
-  background-color: #f9f9f9;
+  background-color: #dfeef2;
   border-radius: 10px;
 }
 
@@ -1188,7 +1197,7 @@ p.quote span {
 }
 
 .light .skill-planet {
-  background-color: #f9f9f9;
+  background-color: #dfeef2;
 }
 
 .skill-planet > img {
@@ -1215,6 +1224,11 @@ p.quote span {
           animation-direction: alternate;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+}
+
+.light .astro-cat-container > img {
+  -webkit-filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.1));
 }
 
 .contact-buttons {
