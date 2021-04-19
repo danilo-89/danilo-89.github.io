@@ -12,6 +12,7 @@ $green-gradient: linear-gradient(
 );
 $nav-link-color: #e2f2eb;
 $navbar-color: #161a2d;
+$white: #ffffff;
 
 @keyframes rotation {
   from {
@@ -93,11 +94,40 @@ button {
 }
 
 body {
+
+  --color-page-background: linear-gradient(
+    to right,
+    #3fba64,
+    #4abd5d,
+    #55bf55,
+    #61c24c,
+    #6cc443
+  );
+  --color-page-background-even: #161a2d;
+  --dark-color: #161a2d;
+
   overflow-x: hidden;
-  background-image: $green-gradient;
+  background: var(--color-page-background);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Titillium Web", sans-serif;
+  transition: background 0.6s ease;
+  &.light {
+    --color-page-background: lightblue;
+    --color-page-background-even: linear-gradient(
+        to right,
+        #3fba64,
+        #4abd5d,
+        #55bf55,
+        #61c24c,
+        #6cc443
+      );
+      --dark-color: #3fba64;
+  }
+}
+
+.astro-blob-fill {
+    fill: var(--dark-color) !important;
 }
 
 .container {
@@ -365,7 +395,7 @@ a {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  top: -100px;
+  top: -80px;
 }
 
 .astro-bubble {
@@ -557,32 +587,27 @@ section {
 }
 
 .section-even {
-  background-color: #161a2d;
+  background: var(--color-page-background-even);
 }
 
 .section-after {
   height: 30px;
   width: 100%;
-  background: #161a2d;
+  background: var(--color-page-background-even);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  transition: background 0.3s ease;
   &::before {
     content: "";
     height: 30px;
     width: 100%;
-    background-image: linear-gradient(
-      to right,
-      #3fba64,
-      #4abd5d,
-      #55bf55,
-      #61c24c,
-      #6cc443
-    );
+    background: var(--color-page-background);
     position: absolute;
     top: 0;
     left: 0;
     border-radius: 0 0 0 100%;
+    transition: background 0.3s ease;
   }
 }
 
@@ -602,13 +627,16 @@ section {
 }
 
 h2 {
-  color: white;
+  color: #161a2d;
   text-align: center;
   font-size: 21px;
   margin-bottom: 12px;
   font-weight: 600;
   letter-spacing: 0.03em;
   padding-top: 15px;
+  .section-even & {
+    color: $white;
+  }
 }
 
 p {
@@ -622,9 +650,13 @@ p {
     margin-right: auto;
     margin-bottom: 45px;
     text-align: center;
+    color: #161a2d;
+    .section-even & {
+        color: #ffffff;
+    }
     &.bold {
       font-weight: 600;
-      text-shadow: -1px 1px 3px rgba(22, 26, 45, 0.12);
+    //   text-shadow: -1px 1px 3px rgba(22, 26, 45, 0.12);
     }
   }
   &.quote {
@@ -926,9 +958,12 @@ hr.custom {
   outline: none;
   border: none;
   background-color: transparent;
-  border-bottom: 3px solid #58c054;
+  border-bottom: 3px solid #7acd75;
   width: 50px;
   margin-bottom: 35px;
+  .section-even & {
+    border-color: #58c054;
+  }
 }
 
 .go {

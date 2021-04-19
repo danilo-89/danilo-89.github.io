@@ -2,10 +2,16 @@ const navToggleBtn = document.getElementById("navToggleBtn");
 const changeColorThemeBtn = document.getElementById("changeColorThemeBtn");
 const navbarMain = document.getElementById("navbarMain");
 
+// Get the header
+var header = document.getElementById("navBar");
+var body = document.getElementsByTagName('body')[0];
+var sticky = header.offsetTop;
+
 
 // togle color theme dark/light
 changeColorThemeBtn.addEventListener("click", function(event) {
     this.classList.toggle("sun");
+    body.classList.toggle("light");
 });
 
 // show/hide navigation on navToggleBtn click
@@ -33,11 +39,7 @@ function hideNav() {
 
 
 
-// Get the header
-var header = document.getElementById("navBar");
-var body = document.getElementsByTagName('body')[0];
 
-var sticky = header.offsetTop;
 
 
 
