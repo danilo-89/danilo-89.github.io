@@ -833,7 +833,14 @@ p {
   justify-content: space-around;
   /*for moz & chrome*/
   -webkit-justify-content: space-evenly !important;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+}
+
+.project-note {
+    color: var(--color-white);
+    font-size: 12px;
+    text-align: center;
+    min-height: 19px;
 }
 
 .planet-frame {
