@@ -832,6 +832,10 @@ p {
   width: 95%;
   max-width: 350px;
   margin-bottom: 15px;
+  .light & {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
   &:hover .skill-planet > img {
     animation: rotation 8s infinite linear;
   }
@@ -944,6 +948,9 @@ p {
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
+  .light & {
+    background-color: #f9f9f9;
+  }
 }
 
 .skill-planet > img {

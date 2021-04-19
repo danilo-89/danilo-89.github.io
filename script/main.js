@@ -65,7 +65,7 @@ function hideNav() {
       var scrollPosition = 60 + document.documentElement.scrollTop || 60 + document.body.scrollTop;
   
       for (i in sections) {
-        if (sections[i] <= scrollPosition) {
+        if (sections[i] <= scrollPosition + 10) {
           document.querySelector('.current').classList.remove("current");
           document.querySelector('a[href*=' + i + ']').classList.add("current");
         }

@@ -1043,6 +1043,11 @@ p.quote span {
   margin-bottom: 15px;
 }
 
+.light .planet-frame {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
 .planet-frame:hover .skill-planet > img {
   -webkit-animation: rotation 8s infinite linear;
           animation: rotation 8s infinite linear;
@@ -1180,6 +1185,10 @@ p.quote span {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.light .skill-planet {
+  background-color: #f9f9f9;
 }
 
 .skill-planet > img {
