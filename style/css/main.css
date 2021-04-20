@@ -169,7 +169,7 @@ button {
     content: "feel free to look around and...";
   }
   100% {
-    content: "Have a nice stay!";
+    content: "Have a nice day!";
   }
 }
 
@@ -184,7 +184,7 @@ button {
     content: "feel free to look around and...";
   }
   100% {
-    content: "Have a nice stay!";
+    content: "Have a nice day!";
   }
 }
 
@@ -239,7 +239,7 @@ body {
 }
 
 body.light {
-  --color-page-background: #cbecc9;
+  --color-page-background: linear-gradient( to right, #f7fff9, #8ad6a1);
   --color-page-background-even: lightblue;
   --color-dark: #3fba64;
   --color-light: #161a2d;
@@ -561,7 +561,7 @@ a {
   margin: auto;
   -webkit-transform: translateY(20px);
           transform: translateY(20px);
-  z-index: 0;
+  z-index: 1;
 }
 
 .arrow-go-down a {
