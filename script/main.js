@@ -7,6 +7,10 @@ var header = document.getElementById("navBar");
 var body = document.getElementsByTagName('body')[0];
 var sticky = header.offsetTop;
 
+const CWWidgetData = {}
+const CWRank = document.getElementById("CWRank");
+const CWHonor = document.getElementById("CWHonor");
+const CWKata = document.getElementById("CWKata");
 
 // togle color theme dark/light
 changeColorThemeBtn.addEventListener("click", function(event) {
@@ -79,12 +83,13 @@ function hideNav() {
     let data = await response.json();
     return data;
 }     
-getCWData().then(data => console.log(data));
 
-// window.addEventListener("load", function(){
-//     // setTimeout(function(){
-        
-//     // }, 0);
-//     // getCWData().then(data => console.log(data));
-//     // alert("true");
-// });
+
+window.addEventListener("load", function(){
+    getCWData().then(data => {
+        console.log(data);
+        CWRank.innerText = data.ranks.languages.javascript.name;
+        CWHonor.innerText = data.honor;
+        CWKata.innerText = data.codeChallenges.totalCompleted;
+    })
+});

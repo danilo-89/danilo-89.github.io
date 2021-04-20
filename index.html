@@ -506,31 +506,43 @@
         </div>
 
         <div class="contact-buttons">
-            <a href="https://github.com/danilo-89" target="_blank" rel="noopener noreferrer"
-                class="btn-standard github">GitHub</a>
-
-            <a href="https://www.linkedin.com/in/danilo-bozinovic/" target="_blank" rel="noopener noreferrer"
-                class="btn-standard linkedin">LinkedIn</a>
-
             <a class="cryptedmail btn-standard email" href="#" data-name="danilo89abcd" data-domain="gmail"
                 data-tld="com"
                 onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;">Email
                 me</a>
 
 
+            <a href="https://github.com/danilo-89" target="_blank" rel="noopener noreferrer"
+                class="btn-standard github">GitHub</a>
+
+            <a href="https://www.linkedin.com/in/danilo-bozinovic/" target="_blank" rel="noopener noreferrer"
+                class="btn-standard linkedin">LinkedIn</a>
+
+
+
+
             <a href="https://www.codewars.com/users/danilo-89" target="_blank" rel="noopener noreferrer" class="codewars-container">
                 <div class="codewars-header">
-                    <span>danilo-89</span>
-                    <span>Codewars</span>
+                    <span class="span-custom">danilo-89</span>
+                    <span class="span-custom text-bold">Codewars</span>
                 </div>
                 <div class="codewars-content">
                     <div>
-                        <span>Rank: 7 kyu</span>
-                        <span>JavaScript</span>
+                        <span class="span-custom">
+                            <span class="text-bold text-gray">Rank: </span>
+                            <span id="CWRank"></span>
+                        </span>
+                        <span class="span-custom">JavaScript</span>
                     </div>
                     <div>
-                        <span>Honor: 62</span>
-                        <span class="span-cata">Completed Kata: 10</span>
+                        <span class="span-custom">
+                          <span class="text-gray text-bold">Honor: </span>
+                          <span id="CWHonor"></span>
+                        </span>
+                        <span class="span-custom span-cata">
+                           <span class="text-gray text-bold">Completed Kata: </span>
+                           <span id="CWKata"></span>
+                        </span>
                     </div>
                 </div>
             </a>
