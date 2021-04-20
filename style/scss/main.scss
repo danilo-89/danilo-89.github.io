@@ -798,6 +798,10 @@ p {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 18px;
+  .light & {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #4a9b61;
+  }
 }
 
 .project-ingridients span:not(:last-of-type) {

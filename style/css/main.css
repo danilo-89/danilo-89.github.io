@@ -1007,6 +1007,11 @@ p.quote span {
   margin-bottom: 18px;
 }
 
+.light .project-ingridients {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #4a9b61;
+}
+
 .project-ingridients span:not(:last-of-type) {
   padding-right: 10px;
 }
