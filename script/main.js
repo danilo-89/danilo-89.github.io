@@ -32,8 +32,6 @@ navbarMain.addEventListener("click", function(event) {
 function hideNav() {
     navbarMain.classList.remove("active");
     navToggleBtn.classList.remove("click");
-    // console.log("rest");
-    // document.getElementById("hamburger").checked = false;
 }
 
 
@@ -62,6 +60,7 @@ function hideNav() {
           }
 
 
+
       var scrollPosition = 60 + document.documentElement.scrollTop || 60 + document.body.scrollTop;
   
       for (i in sections) {
@@ -72,3 +71,20 @@ function hideNav() {
       }
     };
   })();
+
+
+
+  async function getCWData() {
+    let response = await fetch('https://www.codewars.com/api/v1/users/danilo-89');
+    let data = await response.json();
+    return data;
+}     
+getCWData().then(data => console.log(data));
+
+// window.addEventListener("load", function(){
+//     // setTimeout(function(){
+        
+//     // }, 0);
+//     // getCWData().then(data => console.log(data));
+//     // alert("true");
+// });
