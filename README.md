@@ -1,6 +1,6 @@
 # My portfolio
 
-Coded in HTML, Sass, JavaScript.
+Coded using HTML, Sass, JavaScript.
 
 ### See it live [My portfolio](https://danilo-89.github.io/)
 
