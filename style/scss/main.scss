@@ -209,7 +209,7 @@ a {
     min-width: 150px;
     margin-bottom: 25px;
   }
-  &:hover {
+  &:not(.disabled):hover {
     background-color: #4aa846;
     color: #ffffff;
     .project-buttons & {
@@ -227,6 +227,11 @@ a {
     border-bottom: 2px solid #6ac446;
     border-top: 2px solid #324c65;
     padding: 6px 23px;
+  }
+  .project-buttons &.disabled {
+      color: #7a7a7a;
+      border-bottom: 2px solid #b5b5b5;
+      border-top: 2px solid #575757;
   }
 }
 
@@ -413,6 +418,7 @@ a {
   position: relative;
   width: 70px;
   margin: auto;
+  margin-bottom: 10px;
   transform: translateY(20px);
   z-index: 1;
   a {
@@ -694,6 +700,21 @@ h2 {
   .section-even & {
     color: #ffffff;
     color: var(--color-white);
+  }
+}
+
+h3 {
+  &.my-text {
+    width: 600px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 45px;
+    text-align: center;
+    font-size: 21px;
+  }
+  &.bold {
+    font-weight: 600;
   }
 }
 

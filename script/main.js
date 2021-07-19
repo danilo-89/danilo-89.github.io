@@ -39,12 +39,6 @@ function hideNav() {
 }
 
 
-
-
-
-
-
-
 (function() {
   
     var section = document.querySelectorAll(".section");
@@ -63,8 +57,6 @@ function hideNav() {
             header.classList.remove("transparent");
           }
 
-
-
       var scrollPosition = 60 + document.documentElement.scrollTop || 60 + document.body.scrollTop;
   
       for (i in sections) {
@@ -77,13 +69,11 @@ function hideNav() {
   })();
 
 
-
   async function getCWData() {
     let response = await fetch('https://www.codewars.com/api/v1/users/danilo-89');
     let data = await response.json();
     return data;
 }     
-
 
 window.addEventListener("load", function(){
     getCWData().then(data => {

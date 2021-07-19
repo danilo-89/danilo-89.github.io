@@ -331,12 +331,12 @@ a {
   margin-bottom: 25px;
 }
 
-.btn-standard:hover {
+.btn-standard:not(.disabled):hover {
   background-color: #4aa846;
   color: #ffffff;
 }
 
-.project-buttons .btn-standard:hover {
+.project-buttons .btn-standard:not(.disabled):hover {
   background-color: #4aa846;
   color: #ffffff;
   border-top: 2px solid #58c054;
@@ -351,6 +351,12 @@ a {
   border-bottom: 2px solid #6ac446;
   border-top: 2px solid #324c65;
   padding: 6px 23px;
+}
+
+.project-buttons .btn-standard.disabled {
+  color: #7a7a7a;
+  border-bottom: 2px solid #b5b5b5;
+  border-top: 2px solid #575757;
 }
 
 .body-before {
@@ -573,6 +579,7 @@ a {
   position: relative;
   width: 70px;
   margin: auto;
+  margin-bottom: 10px;
   -webkit-transform: translateY(20px);
           transform: translateY(20px);
   z-index: 1;
@@ -882,6 +889,20 @@ h2 {
 .section-even h2 {
   color: #ffffff;
   color: var(--color-white);
+}
+
+h3.my-text {
+  width: 600px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 45px;
+  text-align: center;
+  font-size: 21px;
+}
+
+h3.bold {
+  font-weight: 600;
 }
 
 p {
