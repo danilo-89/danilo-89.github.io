@@ -804,6 +804,9 @@ a {
     width: 100%;
     max-width: 210px;
   }
+  .firstSection {
+    min-height: 850px;
+  }
 }
 
 @media (min-width: 1921px) {
