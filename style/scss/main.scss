@@ -447,11 +447,11 @@ a {
 .astro-bubble {
   display: inline-block;
   background-color: #e2f2eb;
-  padding: 20px 18px;
+  padding: 12px 17px;
   border-radius: 10px;
   position: relative;
   margin-left: -5px;
-  top: -55px;
+  top: -42px;
   animation-duration: 4s;
   animation-name: float;
   animation-iteration-count: infinite;
@@ -600,7 +600,11 @@ a {
 @media (min-width: 1750px) {
 
   .astro-bubble {
-    top: -95px;
+    top: -140px;
+    right: -71%;
+    font-size: 21px;
+    padding: 20px 25px;
+    width: 200px;
   }
   .astro-holder {
     top: -100px;
