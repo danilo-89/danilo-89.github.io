@@ -1,603 +1,783 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Danilo's Portfolio</title>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Danilo's Portfolio</title>
+		<meta name="title" content="Danilo's Portfolio" />
+		<meta name="description" content="My portfolio page" />
+		<meta
+			name="keywords"
+			content="frontend, portfolio, meteor, javascript, jquery, css, html, design, developer"
+		/>
+		<meta name="language" content="English" />
+		<meta name="author" content="Danilo" />
 
-    <meta name="title" content="Danilo's Portfolio">
-    <meta name="description" content="My portfolio page">
-    <meta name="keywords" content="frontend, portfolio, meteor, javascript, jquery, css, html, design, developer">
-    <meta name="language" content="English">
-    <meta name="author" content="Danilo">
+		<title>Danilo's Portfolio</title>
 
-    <title>Danilo's Portfolio</title>
+		<!--  Essential META Tags -->
+		<meta property="og:title" content="Danilo's Portfolio" />
+		<meta property="og:description" content="My portfolio page" />
+		<meta
+			property="og:image"
+			content="https://danilo-89.github.io/thumbnail.jpg"
+		/>
+		<meta property="og:url" content="https://danilo-89.github.io/index.html" />
+		<meta name="twitter:card" content="summary_large_image" />
 
-    <!--  Essential META Tags -->
-    <meta property="og:title" content="Danilo's Portfolio">
-    <meta property="og:description" content="My portfolio page">
-    <meta property="og:image" content="https://danilo-89.github.io/thumbnail.jpg">
-    <meta property="og:url" content="https://danilo-89.github.io/index.html">
-    <meta name="twitter:card" content="summary_large_image">
+		<!--  Non-Essential, But Recommended -->
+		<meta property="og:site_name" content="Danilo's Portfolio" />
+		<meta
+			name="twitter:image:alt"
+			content="astronaut in intro section of Danilo's Portfolio"
+		/>
 
-    <!--  Non-Essential, But Recommended -->
-    <meta property="og:site_name" content="Danilo's Portfolio">
-    <meta name="twitter:image:alt" content="astronaut in intro section of Danilo's Portfolio">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+		<meta name="msapplication-TileColor" content="#2b5797" />
+		<meta name="theme-color" content="#ffffff" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style/css/main.css" />
+	</head>
 
+	<body id="intro" class="section">
+		<div class="body-before"></div>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style/css/main.css">
-</head>
+		<nav class="navbar" id="navBar">
+			<button
+				id="navToggleBtn"
+				class="navbar-toggler"
+				type="button"
+				aria-label="Toggle navigation"
+			>
+				<div class="bar hamburger_bar1"></div>
+				<div class="bar hamburger_bar2"></div>
+			</button>
 
-<body id="intro" class="section">
+			<a class="navbar-brand" href="#">Danilo's portfolio</a>
+			<div class="collapse navbar-collapse" id="navbarMain">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link go current" href="#intro">Intro</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link go" href="#skills">Skills</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link go" href="#projects">Projects</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link go" href="#contact">Contact</a>
+					</li>
+					<li><img src="/imgs/astroMan.svg" alt="floating astronaut" /></li>
+				</ul>
+			</div>
+			<button
+				type="button"
+				class="color-theme-btn"
+				id="changeColorThemeBtn"
+				aria-label="change color theme"
+			>
+				<svg
+					width="100%"
+					version="1.1"
+					class="switch-moon"
+					id="cct1"
+					xmlns="http://www.w3.org/2000/svg"
+					x="0"
+					y="0"
+					viewbox="0 0 293.4 293.4"
+					xml:space="preserve"
+				>
+					<style>
+						.st1m,
+						.st2m {
+							fill-rule: evenodd;
+							clip-rule: evenodd;
+							fill: #888;
+						}
 
-    <div class="body-before"></div>
+						.st2m {
+							fill: #545454;
+						}
+					</style>
+					<path
+						d="M271.7 223.4c-17.2 28.1-42.3 48.3-70.7 59.6-25 9.9-52.6 13-79.5 8.3-17.7-3.1-35.2-9.5-51.5-19.5C20.9 241.6-4.2 187.2.6 133.5 2.5 111.7 9.4 90 21.7 70c1.3-2.1 2.7-4.2 4.1-6.2 29-42.3 76.7-65 125-63.7 24.9.7 49.9 7.7 72.6 21.6 5.1 3.1 9.9 6.5 14.4 10.1 57.5 45.4 73.2 127.6 33.9 191.6z"
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						fill="#ababab"
+					/>
+					<path
+						class="st1m"
+						d="M149.7 266c-13.6 4.1-28.9.8-34.2-7.4-5.3-8.2 1.4-18.2 15-22.3 13.6-4.1 28.9-.8 34.2 7.4 5.2 8.2-1.5 18.2-15 22.3z"
+					/>
+					<path
+						class="st2m"
+						d="M113.7 254.3c-1.2-7.2 5.3-14.6 16.6-18.1 11.3-3.4 23.8-1.7 30.8 3.7 1.2 7.2-5.3 14.6-16.6 18.1-11.3 3.5-23.8 1.7-30.8-3.7z"
+					/>
+					<path
+						class="st1m"
+						d="M28.4 76c9.2-13.2 23.1-19.3 31.1-13.6 8 5.7 7.1 21.1-2 34.3-9.2 13.2-23.1 19.3-31.1 13.6-8-5.7-7.1-21.1 2-34.3z"
+					/>
+					<path
+						class="st2m"
+						d="M62.9 66.1c4.2 7.2 2.3 19.6-5.3 30.6s-18.5 17-26.6 15.5c-4.2-7.2-2.3-19.6 5.3-30.6 7.5-11 18.5-17.1 26.6-15.5z"
+					/>
+					<path
+						class="st1m"
+						d="M170.6 32.7c11.8 4.2 19.9 12.4 18.1 18.4-1.8 6-12.8 7.4-24.6 3.3C152.3 50.2 144.2 42 146 36c1.8-6 12.8-7.4 24.6-3.3z"
+					/>
+					<path
+						class="st2m"
+						d="M187 53.7c-3.9 3.7-13.2 4.1-23 .7-9.8-3.5-17.1-9.8-18.2-15.2 3.9-3.7 13.2-4.1 23-.7 9.9 3.5 17.1 9.8 18.2 15.2z"
+					/>
+					<path
+						class="st1m"
+						d="M30.3 204.6c-5-8.8-4.7-18.2.9-21 5.5-2.8 14.1 2.1 19.1 10.9 5 8.8 4.7 18.2-.9 21-5.5 2.8-14-2.1-19.1-10.9z"
+					/>
+					<path
+						class="st2m"
+						d="M34.2 182.8c5.3-.3 11.9 4.4 16.1 11.7 4.2 7.3 4.6 15.1 1.5 19.1-5.3.3-11.9-4.4-16.1-11.7-4.2-7.3-4.7-15.1-1.5-19.1z"
+					/>
+					<ellipse
+						transform="rotate(-58.473 128.547 141.831)"
+						class="st1m"
+						cx="128.6"
+						cy="141.8"
+						rx="30.6"
+						ry="29.1"
+					/>
+					<circle class="st2m" cx="128.4" cy="145.9" r="23.4" />
+					<ellipse
+						transform="rotate(-32.6 179.73 108.714)"
+						class="st1m"
+						cx="179.7"
+						cy="108.7"
+						rx="12.7"
+						ry="14"
+					/>
+					<ellipse
+						transform="rotate(-32.6 176.953 109.179)"
+						class="st2m"
+						cx="177"
+						cy="109.2"
+						rx="8.9"
+						ry="10.5"
+					/>
+					<path
+						d="M271.7 223.4c-17.2 28.1-42.3 48.3-70.7 59.6-25 10-52.6 13-79.5 8.3-6.4-1.1-12.7-2.7-18.9-4.6 16.2-.8 32.1-4.3 47.2-10.2 28.4-11.3 53.5-31.5 70.7-59.6 10.5-17.1 17-35.4 19.9-54l.9.6.9.6c.3.2.6.3.8.5.3.2.6.3.9.5.3.2.6.3.9.4.2.1.5.2.7.3.4.2.7.3 1.1.4.3.1.5.2.8.3h.1c.2.1.5.1.7.2.1 0 .2 0 .3.1.5.1 1.1.2 1.6.3 1.9.2 3.7.1 5.5-.5 10.6-3.4 14.7-20 9.3-37.1-5.1-16.1-16.9-27-27.1-25.4-7.7-30.4-25.2-58.3-51-78.8-4.5-3.6-9.3-7-14.4-10.1C161.9 8.8 151 3.9 139.8.3c3.5-.3 7.2-.3 11-.2 24.9.7 49.9 7.7 72.7 21.6 5.1 3.1 9.9 6.5 14.4 10.1 57.4 45.4 73.1 127.6 33.8 191.6z"
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						fill="#909090"
+					/>
+					<g>
+						<path
+							class="st1m"
+							d="M248.3 166.7c.5.1 1.1.2 1.6.3-.5-.1-1-.2-1.6-.3z"
+						/>
+						<path
+							d="M255.4 166.4c-1.8.6-3.6.7-5.5.5 6.9-6.2 9.1-20.1 4.5-34.4-3.2-10.1-9-18.1-15.4-22.3-.4-2.1-.9-4.3-1.5-6.4 10.2-1.6 22 9.3 27.1 25.4 5.5 17.3 1.4 33.9-9.2 37.2z"
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							fill="#787878"
+						/>
+					</g>
+					<path
+						class="st2m"
+						d="M250 166.9c-9.2-1.1-19-11.2-23.5-25.5s-2.4-28.2 4.5-34.4c9.2 1.1 19 11.2 23.5 25.5s2.4 28.2-4.5 34.4z"
+					/>
+					<g>
+						<path
+							class="st1m"
+							d="M231 107.1c2.7.3 5.4 1.4 8.1 3.2-.4-2.1-.9-4.3-1.5-6.4-.6.1-1.3.3-1.9.4-1.8.6-3.3 1.5-4.7 2.8z"
+						/>
+					</g>
+				</svg>
 
-    <nav class="navbar" id="navBar">
+				<svg
+					width="100%"
+					version="1.1"
+					class="switch-sun"
+					id="cct2"
+					xmlns="http://www.w3.org/2000/svg"
+					x="0"
+					y="0"
+					viewbox="0 0 293.4 293.4"
+					xml:space="preserve"
+				>
+					<style>
+						.st0-sun {
+							fill-rule: evenodd;
+							clip-rule: evenodd;
+							fill: #fc0;
+						}
+					</style>
+					<circle
+						transform="rotate(-45.001 146.699 146.702)"
+						class="st0-sun"
+						cx="146.7"
+						cy="146.7"
+						r="146.7"
+					/>
+					<path
+						d="M112.5 14.9c1.2-3.7-.2-7.1-3.1-10.1C85 11.2 62 23.9 43 43c-57.3 57.3-57.3 150.2 0 207.5 33.1 33.1 78 47.1 121.2 41.9 16.7-19.4-5.1-43.8 15.8-63.6 13.8-10.9 20.7-16.4 32.4-29.9 21.1-24.3 38.8-50.4 12.9-78.5-15.9-13.6-64.8-13.7-86.8-17.9-25.6-4.9-48.5-10.8-50.2-40.3 1.3-33.1 19.6-32.9 24.2-47.3z"
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						fill="#fb0"
+					/>
+					<path
+						class="st0-sun"
+						d="M125.8 113.3c-38.7-27.6-53 2-88.8 17.4-17.9 3.8-26.6-4.9-33.4-16.5C-7.1 161.7 6 213.5 43 250.4c9.8 9.8 20.7 18 32.3 24.5-4.7-5.3-7.6-11-7-17.8 3.1-14.4 16.3-24.3 26.7-33.6 28.3-25.4 77.7-76.8 30.8-110.2z"
+					/>
+				</svg>
+			</button>
+		</nav>
 
-        <button id="navToggleBtn" class="navbar-toggler" type="button" aria-label="Toggle navigation">
-            <div class="bar hamburger_bar1"></div>
-            <div class="bar hamburger_bar2"></div>
-        </button>
-
-        <a class="navbar-brand" href="#">Danilo's portfolio</a>
-        <div class="collapse navbar-collapse" id="navbarMain">
-
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link go current" href="#intro">Intro</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link go" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link go" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link go" href="#contact">Contact</a>
-                </li>
-                <li> <img src="/imgs/astroMan.svg" alt="floating astronaut"></li>
-
-            </ul>
-        </div>
-        <button type="button" class="color-theme-btn" id="changeColorThemeBtn" aria-label="change color theme">
-
-            <svg width="100%" version="1.1" class="switch-moon" id="cct1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
-                viewbox="0 0 293.4 293.4" xml:space="preserve">
-                <style>
-                    .st1m,
-                    .st2m {
-                        fill-rule: evenodd;
-                        clip-rule: evenodd;
-                        fill: #888
-                    }
-
-                    .st2m {
-                        fill: #545454
-                    }
-                </style>
-                <path
-                    d="M271.7 223.4c-17.2 28.1-42.3 48.3-70.7 59.6-25 9.9-52.6 13-79.5 8.3-17.7-3.1-35.2-9.5-51.5-19.5C20.9 241.6-4.2 187.2.6 133.5 2.5 111.7 9.4 90 21.7 70c1.3-2.1 2.7-4.2 4.1-6.2 29-42.3 76.7-65 125-63.7 24.9.7 49.9 7.7 72.6 21.6 5.1 3.1 9.9 6.5 14.4 10.1 57.5 45.4 73.2 127.6 33.9 191.6z"
-                    fill-rule="evenodd" clip-rule="evenodd" fill="#ababab" />
-                <path class="st1m"
-                    d="M149.7 266c-13.6 4.1-28.9.8-34.2-7.4-5.3-8.2 1.4-18.2 15-22.3 13.6-4.1 28.9-.8 34.2 7.4 5.2 8.2-1.5 18.2-15 22.3z" />
-                <path class="st2m"
-                    d="M113.7 254.3c-1.2-7.2 5.3-14.6 16.6-18.1 11.3-3.4 23.8-1.7 30.8 3.7 1.2 7.2-5.3 14.6-16.6 18.1-11.3 3.5-23.8 1.7-30.8-3.7z" />
-                <path class="st1m"
-                    d="M28.4 76c9.2-13.2 23.1-19.3 31.1-13.6 8 5.7 7.1 21.1-2 34.3-9.2 13.2-23.1 19.3-31.1 13.6-8-5.7-7.1-21.1 2-34.3z" />
-                <path class="st2m"
-                    d="M62.9 66.1c4.2 7.2 2.3 19.6-5.3 30.6s-18.5 17-26.6 15.5c-4.2-7.2-2.3-19.6 5.3-30.6 7.5-11 18.5-17.1 26.6-15.5z" />
-                <path class="st1m"
-                    d="M170.6 32.7c11.8 4.2 19.9 12.4 18.1 18.4-1.8 6-12.8 7.4-24.6 3.3C152.3 50.2 144.2 42 146 36c1.8-6 12.8-7.4 24.6-3.3z" />
-                <path class="st2m"
-                    d="M187 53.7c-3.9 3.7-13.2 4.1-23 .7-9.8-3.5-17.1-9.8-18.2-15.2 3.9-3.7 13.2-4.1 23-.7 9.9 3.5 17.1 9.8 18.2 15.2z" />
-                <path class="st1m"
-                    d="M30.3 204.6c-5-8.8-4.7-18.2.9-21 5.5-2.8 14.1 2.1 19.1 10.9 5 8.8 4.7 18.2-.9 21-5.5 2.8-14-2.1-19.1-10.9z" />
-                <path class="st2m"
-                    d="M34.2 182.8c5.3-.3 11.9 4.4 16.1 11.7 4.2 7.3 4.6 15.1 1.5 19.1-5.3.3-11.9-4.4-16.1-11.7-4.2-7.3-4.7-15.1-1.5-19.1z" />
-                <ellipse transform="rotate(-58.473 128.547 141.831)" class="st1m" cx="128.6" cy="141.8" rx="30.6"
-                    ry="29.1" />
-                <circle class="st2m" cx="128.4" cy="145.9" r="23.4" />
-                <ellipse transform="rotate(-32.6 179.73 108.714)" class="st1m" cx="179.7" cy="108.7" rx="12.7"
-                    ry="14" />
-                <ellipse transform="rotate(-32.6 176.953 109.179)" class="st2m" cx="177" cy="109.2" rx="8.9"
-                    ry="10.5" />
-                <path
-                    d="M271.7 223.4c-17.2 28.1-42.3 48.3-70.7 59.6-25 10-52.6 13-79.5 8.3-6.4-1.1-12.7-2.7-18.9-4.6 16.2-.8 32.1-4.3 47.2-10.2 28.4-11.3 53.5-31.5 70.7-59.6 10.5-17.1 17-35.4 19.9-54l.9.6.9.6c.3.2.6.3.8.5.3.2.6.3.9.5.3.2.6.3.9.4.2.1.5.2.7.3.4.2.7.3 1.1.4.3.1.5.2.8.3h.1c.2.1.5.1.7.2.1 0 .2 0 .3.1.5.1 1.1.2 1.6.3 1.9.2 3.7.1 5.5-.5 10.6-3.4 14.7-20 9.3-37.1-5.1-16.1-16.9-27-27.1-25.4-7.7-30.4-25.2-58.3-51-78.8-4.5-3.6-9.3-7-14.4-10.1C161.9 8.8 151 3.9 139.8.3c3.5-.3 7.2-.3 11-.2 24.9.7 49.9 7.7 72.7 21.6 5.1 3.1 9.9 6.5 14.4 10.1 57.4 45.4 73.1 127.6 33.8 191.6z"
-                    fill-rule="evenodd" clip-rule="evenodd" fill="#909090" />
-                <g>
-                    <path class="st1m" d="M248.3 166.7c.5.1 1.1.2 1.6.3-.5-.1-1-.2-1.6-.3z" />
-                    <path
-                        d="M255.4 166.4c-1.8.6-3.6.7-5.5.5 6.9-6.2 9.1-20.1 4.5-34.4-3.2-10.1-9-18.1-15.4-22.3-.4-2.1-.9-4.3-1.5-6.4 10.2-1.6 22 9.3 27.1 25.4 5.5 17.3 1.4 33.9-9.2 37.2z"
-                        fill-rule="evenodd" clip-rule="evenodd" fill="#787878" />
-                </g>
-                <path class="st2m"
-                    d="M250 166.9c-9.2-1.1-19-11.2-23.5-25.5s-2.4-28.2 4.5-34.4c9.2 1.1 19 11.2 23.5 25.5s2.4 28.2-4.5 34.4z" />
-                <g>
-                    <path class="st1m"
-                        d="M231 107.1c2.7.3 5.4 1.4 8.1 3.2-.4-2.1-.9-4.3-1.5-6.4-.6.1-1.3.3-1.9.4-1.8.6-3.3 1.5-4.7 2.8z" />
-                </g>
-            </svg>
-
-            <svg width="100%" version="1.1" class="switch-sun" id="cct2" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
-                viewbox="0 0 293.4 293.4" xml:space="preserve">
-                <style>
-                    .st0-sun {
-                        fill-rule: evenodd;
-                        clip-rule: evenodd;
-                        fill: #fc0
-                    }
-                </style>
-                <circle transform="rotate(-45.001 146.699 146.702)" class="st0-sun" cx="146.7" cy="146.7" r="146.7" />
-                <path
-                    d="M112.5 14.9c1.2-3.7-.2-7.1-3.1-10.1C85 11.2 62 23.9 43 43c-57.3 57.3-57.3 150.2 0 207.5 33.1 33.1 78 47.1 121.2 41.9 16.7-19.4-5.1-43.8 15.8-63.6 13.8-10.9 20.7-16.4 32.4-29.9 21.1-24.3 38.8-50.4 12.9-78.5-15.9-13.6-64.8-13.7-86.8-17.9-25.6-4.9-48.5-10.8-50.2-40.3 1.3-33.1 19.6-32.9 24.2-47.3z"
-                    fill-rule="evenodd" clip-rule="evenodd" fill="#fb0" />
-                <path class="st0-sun"
-                    d="M125.8 113.3c-38.7-27.6-53 2-88.8 17.4-17.9 3.8-26.6-4.9-33.4-16.5C-7.1 161.7 6 213.5 43 250.4c9.8 9.8 20.7 18 32.3 24.5-4.7-5.3-7.6-11-7-17.8 3.1-14.4 16.3-24.3 26.7-33.6 28.3-25.4 77.7-76.8 30.8-110.2z" />
-            </svg>
-
-
-        </button>
-    </nav>
-
-
-    <section class="firstSection">
-
-        <div class="container">
-            <svg class="astro-blob" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 1545.2 414.3" preserveaspectratio="none">
-                <style type="text/css">
-                    .astro-blob-fill {
-                        fill: #161a2d;
-                    }
-                </style>
-                <defs>
-                </defs>
-                <path class="astro-blob-fill" d="M1545.2,0c-52.5,93.4-99.2,141.9-162,194c-58,48.2-123.5,80.4-191.1,93.9c-65.1,13-132.4,9.5-198.1,12.3
+		<section class="firstSection">
+			<div class="container">
+				<svg
+					class="astro-blob"
+					width="100%"
+					height="100%"
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					viewbox="0 0 1545.2 414.3"
+					preserveaspectratio="none"
+				>
+					<style type="text/css">
+						.astro-blob-fill {
+							fill: #161a2d;
+						}
+					</style>
+					<defs></defs>
+					<path
+						class="astro-blob-fill"
+						d="M1545.2,0c-52.5,93.4-99.2,141.9-162,194c-58,48.2-123.5,80.4-191.1,93.9c-65.1,13-132.4,9.5-198.1,12.3
             c-23.1,1-46.1,2.6-69.1,5.6c-122.9,16.4-234,103.1-359,108.1c-90,3.7-179.6-20.8-261.7-69.9C184.1,272.2,83,151.4,5.7,10.6
-            C3.8,7.1,1.9,3.5,0,0C0,0,1543.9,0,1545.2,0z" />
-            </svg>
-        </div>
-
-        <div class="astro-holder">
-            <svg id="astronaut" width="100px" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
-                viewbox="0 0 243.3 399.1" xml:space="preserve">
-                <style>
-                    .st0 {
-                        fill: #ffffff;
-                    }
-
-                    .st1 {
-                        fill: #4ECE79;
-                    }
-
-                    .st2 {
-                        fill: #E2F2EB;
-                    }
-
-                    .st4 {
-                        fill: #161a2d;
-                        ;
-                    }
-
-                    .st5 {
-                        fill: #44bc69;
-                    }
-
-                    .st3 {
-                        fill: #bbefdc;
-                    }
-
-                    .st7 {
-                        fill: #e2f2eb;
-                    }
-                </style>
-                <g id="AMBody">
-                    <path class="st0"
-                        d="M206.8 346.7c1.4-10.1 2.4-20.2 2.2-30.3s-1.2-20.1-2.8-30.1c-1.2-8.1-3.3-16.1-5.7-23.9 0-.1-.1-.3-.1-.4-3.8-12.3-6.2-24.6-7.6-37.4.1-2.7.3-5.8.2-8.5 0-7.3-.7-15-1.8-21.9-.6-3.7-1.3-7.3-2.2-10.9-2.2-8.5-5.2-16.8-8.9-24.8-3.3-7.1-7.1-14.2-13.4-19-.7-.6-1.3-1.3-1.8-2-.1 0-.2 0-.3.1-1.3.2-2.6.3-4 .2-5.1-.4-10.5-2.9-15.4-3.7-11.2-1.7-22.3 0-33.3 2-14.4 2.7-28.3 7.6-41.4 14.1-9.6 4.7-18.5 10.2-26.7 17-8 6.6-14.9 14.1-21.2 22.3-7 9.1-12 19.2-16.4 29.8-.9 2.2-.8 4.5-.6 6.7-.6.4-1.2.9-1.7 1.4-4.2 4.1-5.4 9.7-2.6 12.6 1.5 1.5 3.7 2 6.2 1.5-.9 1.1-1.6 2.5-2 4.2-1.1 4.5.6 8.9 3.8 9.7 2.7.7 5.5-1.3 7.1-4.5 1 4.1 4 7 7.1 6.5 2.3-.3 4-2.5 4.6-5.3 2.1 2.3 4.9 3.3 7.1 2.3 2.4-1.1 3.4-4.1 2.9-7.4.6.2 1.3.2 1.9 0 2.7-.7 4.1-4.4 3.2-8.2-.3-1.2-.8-2.2-1.4-3.1 1.1-1.7 2.2-3.8 2.7-5.5 3.4-6.7 6.7-13.2 11.4-19.1 4.7-5.9 10.4-10.9 16.2-15.7.7-.6 1.5-1 2.3-1.6-.2 4.4-.1 9.1.4 13.4 1.9 15.9 6.7 30.6 15.1 43.8 6.7 10.6 8.5 19.7 6.5 31.7 0 .1 0 .1-.1.2-4.2 12-9.7 22.1-19.1 30.8-4.8 4.4-10.4 7.8-16 11.2-2.7 1.6-5.4 3-7.8 5.1-4 3.6-6.8 8-7.7 13.3 0 .3-.1.5-.1.8-1 6.2.2 13.7 3.8 20.8 7 13.9 20.5 21.2 30.2 16.3 6.6-3.3 9.6-11.5 8.7-20.8 7.1-4.7 13.9-9.7 20-15.7 9.6-9.5 17.8-19.9 23.9-31.8 5.7-11.2 8.8-22.8 11.4-35 4.4-.9 8.5-2.5 12.6-4.5 2.4 9.2 5.3 18.1 6.5 27.6 1.4 11.3 1.5 22.7.5 34.1-.8 8.5-3.2 16.7-5.5 24.9-.4 1.5-.6 2.9-.7 4.4-1.7 9 4.2 20.5 15.3 27.9 13.5 9.1 29.6 8.8 35.9-.6 4.9-7.3 2.4-18-5.3-26.6 1.7-6 3.1-12.2 3.9-18.4z" />
-                    <path class="st1"
-                        d="M50.4 162.3c6.9 10.3 12.5 24.1 12.3 41.7 2.8-2.7 5.7-5.3 8.7-7.8-1.3-16-6.8-28.9-13.5-38.9-2.6 1.6-5.1 3.2-7.5 5zM128.8 319.1c-14-11.1-28.4-15.8-41.3-17.3-2 3-4.2 5.8-6.7 8.5 13 .5 28.3 4.5 43 16.4 1.8-2.4 3.5-5 5-7.6zM206.3 286.3c-.1-.7-.2-1.4-.4-2.2-18.9 2.8-33 11.6-42.8 20.5.4 4 .6 8 .7 11.9 8.6-9.3 22.8-20.4 43.4-23.5-.2-2.2-.5-4.4-.9-6.7z" />
-                    <path class="st2"
-                        d="M159 209.3l-41 10.6c-2.9.5-5.7-1.7-6.2-4.8l-4.4-28.2c-.8-4.9 2.4-9.5 7-10.2l38.3-6c2.9-.5 5.7 1.7 6.2 4.8l4.6 27.3c.4 3.1-1.6 6-4.5 6.5z" />
-                    <path class="st3"
-                        d="M158.4 205l-38.6 9.8c-2.8.4-5.4-1.5-5.8-4.2l-3.9-25c-.7-4.3 2.3-8.4 6.6-9.1l36-5.7c2.8-.4 5.4 1.5 5.8 4.2l4.1 24.2c.5 2.7-1.4 5.3-4.2 5.8z" />
-                    <path class="st4 blink-color"
-                        d="M150.1 189.1l-26.1 5.5c-1.9.3-3.5-.3-3.7-1.4l-1.5-9.6c-.3-1.7 1.9-3.4 4.8-3.9l24.2-3.8c1.9-.3 3.5.3 3.7 1.4l1.7 9.3c.2 1.1-1.2 2.2-3.1 2.5z" />
-                    <circle class="st1" cx="126" cy="204" r="4.6" />
-                    <circle class="st4" cx="138.7" cy="201.8" r="2.7" />
-                    <path class="st2"
-                        d="M92.3 242.4C80 224.2 81 181.7 81 181.7c0 .2-4.8 2-5.2 2.2-4.2 2-8.3 4.4-12.1 7.1-5.1 3.6-9.7 7.9-13.5 12.9-3.3 4.2-5.9 9-7.2 14.2-1 4.1-1.4 8.8.1 12.8.3.7.6 1.4.5 2.1.5-.8.8-1.8 1.1-2.7 3.4-6.7 6.7-13.2 11.4-19.1 4.7-5.9 10.4-10.9 16.2-15.7.7-.6 1.5-1 2.3-1.6-.2 4.4-.1 9.1.4 13.4 1.9 15.9 6.7 30.6 15.1 43.8 6.7 10.6 8.5 19.7 6.5 31.7 0 .1 0 .1-.1.2-4.2 12-9.7 22.1-19.1 30.8-10.2 9.3-28.9 14.1-31.5 29.6-.5 3-.2 5.7.6 8.6.7 2.9 1.6 5.6 3.5 8 2.6 3.2 5.5 5.8 8.9 7.5-1.3-3.7-2.1-7.7-2.2-11.9-.2-8.8 2.7-17.9 10.2-22.9 8.3-9 20.6-13.5 27.5-24 13.9-21 11.6-46-2.1-66.3zM167.5 275.8c-.3-1.2-.7-2.4-1.1-3.6-.1-.4-.8-2.1-.9-2.4-.2-.4-.4-.9-.7-1.3-1.8 1-3.4 2.2-5.1 3.2-1.1.7-2.2 1.4-3.4 2 2.4 9.2 5.3 17.9 6.4 27.4 1.4 11.3 1.5 22.7.5 34.1 0 .3-.1.5-.1.8 4.2-10.7 7.7-21.8 8.1-33.1.2-6.5-.5-12.8-1.9-19.2-.5-2.7-1.1-5.3-1.8-7.9z" />
-                    <path class="st5"
-                        d="M70.1 186.7c-2.2 1.3-4.3 2.7-6.3 4.1-.5.4-1.3.9-1.9 1.4.5 3.7.8 7.6.8 11.8 2.1-2 4.2-4 6.4-5.8l.1-.1 2.1-1.8c-.1-3.4-.6-6.6-1.2-9.6zM97.6 303.6c-3.4-.8-6.8-1.4-10.1-1.8-.5.7-.9 1.4-1.4 2.1-.1.1-.2.3-.3.4-.4.6-.8 1.1-1.3 1.7-.1.2-.2.3-.4.5-.4.5-.9 1.1-1.3 1.6-.1.1-.2.3-.3.4-.6.7-1.1 1.3-1.7 1.9 3.6.2 7.6.6 11.6 1.4.8-.9 1.4-1.9 2-2.9 1.2-1.8 2.3-3.5 3.2-5.3zM171.3 298.1c-3 2.1-5.7 4.3-8.2 6.5.1.8.1 1.6.2 2.4 0 .4.1.7.1 1.1.2 2.8.4 5.6.4 8.5 1.9-2.1 4.3-4.4 6.8-6.6.3-2.4.6-4.6.7-7.1.1-1.6.1-3.2 0-4.8z" />
-                    <g>
-                        <path class="st2"
-                            d="M159.4 260.6l-24 5.8c-1.7.2-3.3-1-3.6-2.9l-2.4-16.4c-.4-2.9 1.4-5.5 4.1-5.9L156 238c1.7-.2 3.3 1 3.6 2.9l2.5 15.9c.2 1.8-1 3.5-2.7 3.8z" />
-                        <path class="st3"
-                            d="M159.1 258l-22.6 5.4c-1.6.2-3.1-.9-3.4-2.5l-2.1-14.6c-.4-2.5 1.4-4.9 3.9-5.3l21-3c1.6-.2 3.1.9 3.4 2.5l2.2 14.2c.4 1.6-.8 3.1-2.4 3.3z" />
-                        <circle class="st1" cx="146.1" cy="250.7" r="4.4" />
-                    </g>
-                    <g>
-                        <path class="st4"
-                            d="M161.4 252.4c12.1-3.4 23.4-9.7 32.8-18.1-.5-3.2-.9-6.5-1.3-9.8.1-1 .1-2.1.1-3.3-.3.3-.6.7-.9 1-2.3 2.5-4.8 4.8-7.5 7-.3.3-.6.5-.9.7-.1 0-.2.2-.3.3 0 0-.1 0-.1.1l-2.1 1.5c-1.4 1-2.9 2-4.4 2.9-2.9 1.8-5.9 3.4-9.1 4.8-.2.1-.4.2-.5.2h-.1c-.4.2-.9.4-1.3.5-.9.4-1.8.7-2.8 1-1.1.4-2.2.7-3.3 1.1l1.7 10.1zM129.9 250.1c-9.6.6-19.2.5-28.7-.5-1.2-.1-2.4-.3-3.7-.4-.6-.1-1.1-.1-1.7-.2-.1 0-1-.1-1.1-.2-1.9-.3-3.8-.6-5.6-1.1l-1.2-.3L90 251c1.7 2.7 3.1 5.3 4.1 7.8 1.9.2 3.8.4 5.5.6 10.3 1.1 20.7 1.3 31.1.6.2 0 .4 0 .5-.1l-1.3-9.8z" />
-                    </g>
-                </g>
-                <g id="AMHand">
-                    <path class="st0"
-                        d="M243.3 101.8c0-2.8-.4-5.2-1.6-7.7-.2-.6-.5-1.2-.7-1.8.2-.4.5-.8.7-1.2 1.6-3.6.9-7.4-1.7-8.6-.6-.3-1.3-.4-1.9-.3 1.1-3.1.6-6.3-1.6-7.8-2-1.4-4.9-.9-7.4 1-.1-2.9-1.4-5.3-3.6-6-3-1-6.4 1.3-8.1 5.2-1-3.5-3.5-5.9-6.2-5.7-3.3.2-5.8 4.2-5.4 8.9.1 1.7.6 3.2 1.3 4.5-2.3-.9-4.6-.8-6.3.4-3.3 2.4-3.1 8.2.4 12.9.8 1 1.6 1.9 2.5 2.7-.1.9-.3 1.8-.3 2.7-.1 2 .2 3.9-.2 5.8-.5 2.3-1 4.7-2 6.8-1.2 2.6-2.7 5.2-4.5 7.5-2.1 2.5-4.4 4.9-7 6.8-3 2.2-6.3 4-9.7 5.3-5 2-10.3 2.9-15.5 3.7-1.3.2-2.6.2-4 .1-11.5 10-9.5 26.4.6 36 5.5 6.8 18.4 8.3 24.1.9 0-.1-.1-.3-.1-.4.2-.1.4-.1.6-.2.1-.2.3-.4.4-.7-.1.2-.3.4-.4.7 5.4-1.7 10.8-3.7 15.9-6.2 5.9-3 11.5-6.7 16.5-11s9.1-9 13-14.4c4.2-5.8 7.1-12.2 9.4-18.9 1.4-4.2 1.9-8.4 2.6-12.7.2-2.8.2-5.5.2-8.3z" />
-                    <path class="st1"
-                        d="M179.9 133.1c-1.5.6-3 1.1-4.5 1.5 3.6 15.3 10.4 27 18.2 35.8 2.6-1 5.3-2.1 7.8-3.4.3-.2.6-.3.9-.5-8-8.4-15-19.8-18.4-35.3-1.3.7-2.6 1.3-4 1.9z" />
-                    <path class="st2"
-                        d="M222.9 140.2c-7.7 8.2-16.9 13.8-27.3 18-5.6 2.3-11.4 3.9-17.2 5.6l.6.9c1.4 1.7 2.8 3.3 3.9 5.2.7 1.2 1.4 2.3 2 3.5 5.6-1.7 11.2-3.7 16.5-6.4 5.9-3 11.5-6.7 16.5-11s9.1-9 13-14.4c4.2-5.8 7.1-12.2 9.4-18.9 1.4-4 1.9-8.1 2.5-12.2-4.6 11-11.6 20.9-19.9 29.7z" />
-                    <path class="st5"
-                        d="M195.5 158.2c-2.9 1.2-5.8 2.2-8.8 3.1 2.1 3.3 4.5 6.4 6.9 9.1.6-.3 1.3-.5 1.9-.8.6-.3 1.3-.5 1.9-.8.2-.1.3-.1.5-.2.5-.2 1-.4 1.5-.7.6-.3 1.3-.6 1.9-.9.1 0 .1-.1.2-.1.2-.1.5-.3.7-.4-2.2-2.5-4.6-5.3-6.7-8.3z" />
-                </g>
-                <g id="AMHead">
-                    <path class="st4"
-                        d="M184.7 74c9.2 41.1-17.2 73.2-56.8 82.1-39.6 8.9-77.2-8.8-86.5-49.8s15.4-81.6 54.9-90.5 79.2 17.1 88.4 58.2z" />
-                    <path class="st0"
-                        d="M186.2 63.1c9.7 43.2-18.1 77-59.8 86.3s-81.3-9.2-91-52.4S51.6 11.2 93.2 1.8s83.3 18.1 93 61.3z" />
-                    <path class="st1"
-                        d="M176.3 66.4c7.5 33.4-18.8 53-54.8 61.1s-68.2 1.6-75.7-31.8 15.6-67 51.7-75.1 71.3 12.5 78.8 45.8z" />
-                    <path class="st4"
-                        d="M174.6 58.8c7.5 33.4-18.8 53-54.8 61.1s-68.2 1.6-75.7-31.8 15.6-67 51.7-75.1 71.3 12.4 78.8 45.8z" />
-                    <path class="st7"
-                        d="M133.4 28c.8-2.3-.4-4.9-2.7-5.8-10.2-3.7-21.7-4.6-33.4-2-13.3 3-24.6 10.2-32.5 19.7-1.6 1.9-1.4 4.7.5 6.3 1.9 1.7 4.9 1.5 6.5-.5 6.7-8 16.2-14 27.5-16.6 9.9-2.2 19.6-1.4 28.3 1.7 2.4.8 5-.4 5.8-2.8z" />
-                    <circle transform="rotate(-12.674 61.054 57.566)" class="st7" cx="61" cy="57.6" r="5.4" />
-                </g>
-            </svg>
-
-            <div class="astro-bubble">
-                <span> </span>
-            </div>
-        </div>
-
-        <h3 class="my-text bold">Hi, welcome to my portfolio page. 🙂 My main fields of interest are UX/UI design and frontend development.</h3>
-        <p class="my-text bold">If you want to find out more, scroll down.
-        </p>
-
-        <div class="arrow-go-down">
-            <a href="#skills" aria-label="Go down to skills section">
-                <svg width="100%" data-name="see more arrow" xmlns="http://www.w3.org/2000/svg"
-                    viewbox="0 0 184.911 111.967">
-                    <path class="arrow-path"
-                        d="M183.816 18.27L166.974 1.428a3.737 3.737 0 00-5.286 0L94.216 68.9a2.255 2.255 0 01-3.188 0L23.223 1.1a3.737 3.737 0 00-5.286 0L1.1 17.937a3.737 3.737 0 000 5.286L87.87 110a6.718 6.718 0 009.5 0l86.443-86.442a3.737 3.737 0 00.003-5.288z" />
-                </svg>
-            </a>
-        </div>
-
-
-    </section>
-
-
-    <div class="section-after"></div>
-
-    <!-- SKILLS SECTION START -->
-    <section class="section-even section" id="skills">
-
-        <h2>Skills</h2>
-
-        <hr class="custom">
-
-        <p class="my-text">My goal is to always learn more and to constantly improve.</p>
-
-        <p class="quote">“Learn as though you would never be able to master it; hold it as though you would be in fear
-            of losing it.”
-            <span>Confucius</span>
-        </p>
-
-
-
-        <div class="section-container">
-
-            <div class="planet-frame blue">
-                <div class="planet-frame-top">
-                    <span>COMFORTABLE WITH</span>
-                </div>
-                <div class="planet-frame-bottom">
-                    <div class="skill-planet">
-                        <img src="/imgs/planet-01.svg" alt="blue planet">
-                    </div>
-                    <div class="skill-skills">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>Bootstrap</span>
-                        <span>Adobe Illustrator</span>
-                        <span>Adobe Photoshop</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="planet-frame green">
-                <div class="planet-frame-top">
-                    <span>MEDIUM LEVEL</span>
-                </div>
-                <div class="planet-frame-bottom">
-                    <div class="skill-planet">
-                        <img src="/imgs/planet-02.svg" alt="green planet">
-                    </div>
-                    <div class="skill-skills">
-                        <span>JavaScript</span>
-                        <span>React</span>
-                        <span>jQuery</span>
-                        <span>BlazeJS</span>
-                        <span>MeteorJS</span>
-                        <span>SaSS</span>
-                        <span>GIT</span>
-                        <span>AJAX</span>
-                        <span>AdobeXD</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="planet-frame yellow">
-                <div class="planet-frame-top">
-                    <span>STARTED OR BASIC LEVEL</span>
-                </div>
-                <div class="planet-frame-bottom">
-                    <div class="skill-planet">
-                        <img src="/imgs/planet-03.svg" alt="yellow planet">
-                    </div>
-                    <div class="skill-skills">
-                        <span>MongoDB</span>
-                        <span>Angular 2+</span>
-                        <span>Figma</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="planet-frame gray">
-                <div class="planet-frame-top">
-                    <span>PLANING TO LEARN</span>
-                </div>
-                <div class="planet-frame-bottom">
-                    <div class="skill-planet">
-                        <img src="/imgs/planet-04.svg" alt="gray planet">
-                    </div>
-                    <div class="skill-skills">
-                        <span>Redux</span>
-                        <span>TypeScript</span>
-                        <span>Express</span>
-                        <span>NodeJS</span>
-                        <span>Firebase</span>
-                    </div>
-                </div>
-            </div>
-
-
-
-        </div>
-
-    </section>
-    <!-- SKILLS SECTION END -->
-    <div class="section-after"></div>
-
-    <!-- PROJECTS SECTION START -->
-    <section class="section" id="projects">
-        <h2>Projects</h2>
-
-        <hr class="custom">
-
-        <p class="my-text bold">Here you can see some of my projects. More are coming soon.</p>
-
-
-
-
-
-
-        <div class="section-container">
-
-            <div class="project-frame">
-                <div class="project-frame-inside">
-                    <div class="project-galery">
-                        <img src="/imgs/recipan0.jpg" alt="recipan app screen">
-                    </div>
-                    <div class="project-description">
-                        <img src="/imgs/astroMan.svg" alt="astronaut">
-                        <div class="project-ingridients">
-                            <span>jQuery</span>
-                            <span>BlazeJS</span>
-                            <span>MeteorJS</span>
-                            <span>MongoDB</span>
-                        </div>
-                        <div class="project-title">
-                            <span>reciPan</span>
-                        </div>
-                        <div class="project-about">
-                            <span>· a recipe managment app;</span>
-                            <span>· social network features (adding friends and sharing recipes with friends);</span>
-                            <span>· frontend and backend in MeteorJS.</span>
-                        </div>
-                        <div class="project-buttons">
-                            <a href="https://recipan.herokuapp.com/" target="_blank" rel="noopener noreferrer"
-                                class="btn-standard">DEMO*</a>
-                            <a href="https://github.com/danilo-89/reciPan-recipe-manager-app" target="_blank"
-                                rel="noopener noreferrer" class="btn-standard">GITHUB</a>
-                        </div>
-                        <div class="project-note">
-                            <span>
-                                *Please wait about 20 seconds on the first start
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-frame">
-                <div class="project-frame-inside">
-                    <div class="project-galery">
-                        <img src="/imgs/petitions0.jpg" alt="petitions platform screen">
-                    </div>
-                    <div class="project-description">
-                        <img src="/imgs/astroMan.svg" alt="astronaut">
-                        <div class="project-ingridients">
-                            <span>React</span>
-                            <span>Bootstrap</span>
-                            <span>MeteorJS</span>
-                            <span>MongoDB</span>
-                        </div>
-                        <div class="project-title">
-                            <span>petitions</span>
-                        </div>
-                        <div class="project-about">
-                            <span>· a petitions platform;</span>
-                            <span>· registered users can create petitions, everybody can sign them;</span>
-                            <span>· sharing petitions via social media and QR codes...</span>
-                        </div>
-                        <div class="project-buttons">
-                            <a href="https://petitions-react.herokuapp.com/" target="_blank" rel="noopener noreferrer"
-                                class="btn-standard">DEMO*</a>
-                            <a href="https://github.com/danilo-89/petitions" target="_blank"
-                                rel="noopener noreferrer" class="btn-standard">GITHUB</a>
-                        </div>
-                        <div class="project-note">
-                            <span>
-                                *Please wait about 20 seconds on the first start
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-frame">
-                <div class="project-frame-inside">
-                    <div class="project-galery">
-                        <img src="/imgs/matchPairs0.jpg" alt="match pairs game screen">
-                    </div>
-                    <div class="project-description">
-                        <img src="/imgs/astroMan.svg" alt="astronaut">
-                        <div class="project-ingridients">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-title">
-                            <span>Memory Card Game - Match Pairs</span>
-                        </div>
-                        <div class="project-about">
-                            <span>· simple game of memory;</span>
-                            <span>· completely in HTML, CSS and vanilla JavaScript;</span>
-                            <span>· responsive design.</span>
-                        </div>
-                        <div class="project-buttons">
-                            <a href="https://danilo-89.github.io/projects/Memory-Card-Game---Match-Pairs/index.html"
-                                target="_blank" rel="noopener noreferrer" class="btn-standard">DEMO</a>
-                            <a href="https://github.com/danilo-89/Memory-Card-Game---Match-Pairs" target="_blank"
-                                rel="noopener noreferrer" class="btn-standard">GITHUB</a>
-                        </div>
-                        <div class="project-note">
-                            <span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-frame">
-
-            </div>
-
-            <div class="project-frame">
-
-            </div>
-
-            <div class="project-frame">
-
-            </div>
-
-
-
-        </div>
-
-
-
-
-    </section>
-    <!-- PROJECTS SECTION END -->
-    <div class="section-after"></div>
-
-    <!-- CONTACT SECTION START -->
-    <section class="section section-even" id="contact">
-
-        <h2>Contact</h2>
-
-        <hr class="custom">
-
-        <p class="my-text">
-            Here you can get more info about me.
-            <br>
-            If you have any questions or work offer, feel free to contact me.
-        </p>
-
-        <div class="contact-buttons">
-            <a href="https://danilo-89.github.io/CV/cv_2021.pdf" target="_blank" rel="noopener noreferrer"
-                class="btn-standard cv-download">CV Download</a>
-        </div>
-
-        <div class="astro-cat-container">
-            <img src="/imgs/astroCat.svg" alt="astronaut cat">
-        </div>
-
-        <div class="contact-buttons">
-            <a class="cryptedmail btn-standard email" href="#" data-name="danilo89abcd" data-domain="gmail"
-                data-tld="com"
-                onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;">Email
-                me</a>
-
-
-            <a href="https://github.com/danilo-89" target="_blank" rel="noopener noreferrer"
-                class="btn-standard github">GitHub</a>
-
-            <a href="https://www.linkedin.com/in/danilo-bozinovic/" target="_blank" rel="noopener noreferrer"
-                class="btn-standard linkedin">LinkedIn</a>
-
-
-
-
-            <a href="https://www.codewars.com/users/danilo-89" target="_blank" rel="noopener noreferrer" class="codewars-container">
-                <div class="codewars-header">
-                    <span class="span-custom">danilo-89</span>
-                    <span class="span-custom text-bold">Codewars</span>
-                </div>
-                <div class="codewars-content">
-                    <div>
-                        <span class="span-custom">
-                            <span class="text-bold text-gray">Rank: </span>
-                            <span id="CWRank"></span>
-                        </span>
-                        <span class="span-custom">JavaScript</span>
-                    </div>
-                    <div>
-                        <span class="span-custom">
-                          <span class="text-gray text-bold">Honor: </span>
-                          <span id="CWHonor"></span>
-                        </span>
-                        <span class="span-custom span-cata">
-                           <span class="text-gray text-bold">Completed Kata: </span>
-                           <span id="CWKata"></span>
-                        </span>
-                    </div>
-                </div>
-            </a>
-
-        </div>
-
-
-
-    </section>
-    <!-- CONTACT SECTION END -->
-
-    <script src="/script/main.js"></script>
-</body>
-
+            C3.8,7.1,1.9,3.5,0,0C0,0,1543.9,0,1545.2,0z"
+					/>
+				</svg>
+			</div>
+
+			<div class="astro-holder">
+				<svg
+					id="astronaut"
+					width="100px"
+					version="1.1"
+					xmlns="http://www.w3.org/2000/svg"
+					x="0"
+					y="0"
+					viewbox="0 0 243.3 399.1"
+					xml:space="preserve"
+				>
+					<style>
+						.st0 {
+							fill: #ffffff;
+						}
+
+						.st1 {
+							fill: #4ece79;
+						}
+
+						.st2 {
+							fill: #e2f2eb;
+						}
+
+						.st4 {
+							fill: #161a2d;
+						}
+
+						.st5 {
+							fill: #44bc69;
+						}
+
+						.st3 {
+							fill: #bbefdc;
+						}
+
+						.st7 {
+							fill: #e2f2eb;
+						}
+					</style>
+					<g id="AMBody">
+						<path
+							class="st0"
+							d="M206.8 346.7c1.4-10.1 2.4-20.2 2.2-30.3s-1.2-20.1-2.8-30.1c-1.2-8.1-3.3-16.1-5.7-23.9 0-.1-.1-.3-.1-.4-3.8-12.3-6.2-24.6-7.6-37.4.1-2.7.3-5.8.2-8.5 0-7.3-.7-15-1.8-21.9-.6-3.7-1.3-7.3-2.2-10.9-2.2-8.5-5.2-16.8-8.9-24.8-3.3-7.1-7.1-14.2-13.4-19-.7-.6-1.3-1.3-1.8-2-.1 0-.2 0-.3.1-1.3.2-2.6.3-4 .2-5.1-.4-10.5-2.9-15.4-3.7-11.2-1.7-22.3 0-33.3 2-14.4 2.7-28.3 7.6-41.4 14.1-9.6 4.7-18.5 10.2-26.7 17-8 6.6-14.9 14.1-21.2 22.3-7 9.1-12 19.2-16.4 29.8-.9 2.2-.8 4.5-.6 6.7-.6.4-1.2.9-1.7 1.4-4.2 4.1-5.4 9.7-2.6 12.6 1.5 1.5 3.7 2 6.2 1.5-.9 1.1-1.6 2.5-2 4.2-1.1 4.5.6 8.9 3.8 9.7 2.7.7 5.5-1.3 7.1-4.5 1 4.1 4 7 7.1 6.5 2.3-.3 4-2.5 4.6-5.3 2.1 2.3 4.9 3.3 7.1 2.3 2.4-1.1 3.4-4.1 2.9-7.4.6.2 1.3.2 1.9 0 2.7-.7 4.1-4.4 3.2-8.2-.3-1.2-.8-2.2-1.4-3.1 1.1-1.7 2.2-3.8 2.7-5.5 3.4-6.7 6.7-13.2 11.4-19.1 4.7-5.9 10.4-10.9 16.2-15.7.7-.6 1.5-1 2.3-1.6-.2 4.4-.1 9.1.4 13.4 1.9 15.9 6.7 30.6 15.1 43.8 6.7 10.6 8.5 19.7 6.5 31.7 0 .1 0 .1-.1.2-4.2 12-9.7 22.1-19.1 30.8-4.8 4.4-10.4 7.8-16 11.2-2.7 1.6-5.4 3-7.8 5.1-4 3.6-6.8 8-7.7 13.3 0 .3-.1.5-.1.8-1 6.2.2 13.7 3.8 20.8 7 13.9 20.5 21.2 30.2 16.3 6.6-3.3 9.6-11.5 8.7-20.8 7.1-4.7 13.9-9.7 20-15.7 9.6-9.5 17.8-19.9 23.9-31.8 5.7-11.2 8.8-22.8 11.4-35 4.4-.9 8.5-2.5 12.6-4.5 2.4 9.2 5.3 18.1 6.5 27.6 1.4 11.3 1.5 22.7.5 34.1-.8 8.5-3.2 16.7-5.5 24.9-.4 1.5-.6 2.9-.7 4.4-1.7 9 4.2 20.5 15.3 27.9 13.5 9.1 29.6 8.8 35.9-.6 4.9-7.3 2.4-18-5.3-26.6 1.7-6 3.1-12.2 3.9-18.4z"
+						/>
+						<path
+							class="st1"
+							d="M50.4 162.3c6.9 10.3 12.5 24.1 12.3 41.7 2.8-2.7 5.7-5.3 8.7-7.8-1.3-16-6.8-28.9-13.5-38.9-2.6 1.6-5.1 3.2-7.5 5zM128.8 319.1c-14-11.1-28.4-15.8-41.3-17.3-2 3-4.2 5.8-6.7 8.5 13 .5 28.3 4.5 43 16.4 1.8-2.4 3.5-5 5-7.6zM206.3 286.3c-.1-.7-.2-1.4-.4-2.2-18.9 2.8-33 11.6-42.8 20.5.4 4 .6 8 .7 11.9 8.6-9.3 22.8-20.4 43.4-23.5-.2-2.2-.5-4.4-.9-6.7z"
+						/>
+						<path
+							class="st2"
+							d="M159 209.3l-41 10.6c-2.9.5-5.7-1.7-6.2-4.8l-4.4-28.2c-.8-4.9 2.4-9.5 7-10.2l38.3-6c2.9-.5 5.7 1.7 6.2 4.8l4.6 27.3c.4 3.1-1.6 6-4.5 6.5z"
+						/>
+						<path
+							class="st3"
+							d="M158.4 205l-38.6 9.8c-2.8.4-5.4-1.5-5.8-4.2l-3.9-25c-.7-4.3 2.3-8.4 6.6-9.1l36-5.7c2.8-.4 5.4 1.5 5.8 4.2l4.1 24.2c.5 2.7-1.4 5.3-4.2 5.8z"
+						/>
+						<path
+							class="st4 blink-color"
+							d="M150.1 189.1l-26.1 5.5c-1.9.3-3.5-.3-3.7-1.4l-1.5-9.6c-.3-1.7 1.9-3.4 4.8-3.9l24.2-3.8c1.9-.3 3.5.3 3.7 1.4l1.7 9.3c.2 1.1-1.2 2.2-3.1 2.5z"
+						/>
+						<circle class="st1" cx="126" cy="204" r="4.6" />
+						<circle class="st4" cx="138.7" cy="201.8" r="2.7" />
+						<path
+							class="st2"
+							d="M92.3 242.4C80 224.2 81 181.7 81 181.7c0 .2-4.8 2-5.2 2.2-4.2 2-8.3 4.4-12.1 7.1-5.1 3.6-9.7 7.9-13.5 12.9-3.3 4.2-5.9 9-7.2 14.2-1 4.1-1.4 8.8.1 12.8.3.7.6 1.4.5 2.1.5-.8.8-1.8 1.1-2.7 3.4-6.7 6.7-13.2 11.4-19.1 4.7-5.9 10.4-10.9 16.2-15.7.7-.6 1.5-1 2.3-1.6-.2 4.4-.1 9.1.4 13.4 1.9 15.9 6.7 30.6 15.1 43.8 6.7 10.6 8.5 19.7 6.5 31.7 0 .1 0 .1-.1.2-4.2 12-9.7 22.1-19.1 30.8-10.2 9.3-28.9 14.1-31.5 29.6-.5 3-.2 5.7.6 8.6.7 2.9 1.6 5.6 3.5 8 2.6 3.2 5.5 5.8 8.9 7.5-1.3-3.7-2.1-7.7-2.2-11.9-.2-8.8 2.7-17.9 10.2-22.9 8.3-9 20.6-13.5 27.5-24 13.9-21 11.6-46-2.1-66.3zM167.5 275.8c-.3-1.2-.7-2.4-1.1-3.6-.1-.4-.8-2.1-.9-2.4-.2-.4-.4-.9-.7-1.3-1.8 1-3.4 2.2-5.1 3.2-1.1.7-2.2 1.4-3.4 2 2.4 9.2 5.3 17.9 6.4 27.4 1.4 11.3 1.5 22.7.5 34.1 0 .3-.1.5-.1.8 4.2-10.7 7.7-21.8 8.1-33.1.2-6.5-.5-12.8-1.9-19.2-.5-2.7-1.1-5.3-1.8-7.9z"
+						/>
+						<path
+							class="st5"
+							d="M70.1 186.7c-2.2 1.3-4.3 2.7-6.3 4.1-.5.4-1.3.9-1.9 1.4.5 3.7.8 7.6.8 11.8 2.1-2 4.2-4 6.4-5.8l.1-.1 2.1-1.8c-.1-3.4-.6-6.6-1.2-9.6zM97.6 303.6c-3.4-.8-6.8-1.4-10.1-1.8-.5.7-.9 1.4-1.4 2.1-.1.1-.2.3-.3.4-.4.6-.8 1.1-1.3 1.7-.1.2-.2.3-.4.5-.4.5-.9 1.1-1.3 1.6-.1.1-.2.3-.3.4-.6.7-1.1 1.3-1.7 1.9 3.6.2 7.6.6 11.6 1.4.8-.9 1.4-1.9 2-2.9 1.2-1.8 2.3-3.5 3.2-5.3zM171.3 298.1c-3 2.1-5.7 4.3-8.2 6.5.1.8.1 1.6.2 2.4 0 .4.1.7.1 1.1.2 2.8.4 5.6.4 8.5 1.9-2.1 4.3-4.4 6.8-6.6.3-2.4.6-4.6.7-7.1.1-1.6.1-3.2 0-4.8z"
+						/>
+						<g>
+							<path
+								class="st2"
+								d="M159.4 260.6l-24 5.8c-1.7.2-3.3-1-3.6-2.9l-2.4-16.4c-.4-2.9 1.4-5.5 4.1-5.9L156 238c1.7-.2 3.3 1 3.6 2.9l2.5 15.9c.2 1.8-1 3.5-2.7 3.8z"
+							/>
+							<path
+								class="st3"
+								d="M159.1 258l-22.6 5.4c-1.6.2-3.1-.9-3.4-2.5l-2.1-14.6c-.4-2.5 1.4-4.9 3.9-5.3l21-3c1.6-.2 3.1.9 3.4 2.5l2.2 14.2c.4 1.6-.8 3.1-2.4 3.3z"
+							/>
+							<circle class="st1" cx="146.1" cy="250.7" r="4.4" />
+						</g>
+						<g>
+							<path
+								class="st4"
+								d="M161.4 252.4c12.1-3.4 23.4-9.7 32.8-18.1-.5-3.2-.9-6.5-1.3-9.8.1-1 .1-2.1.1-3.3-.3.3-.6.7-.9 1-2.3 2.5-4.8 4.8-7.5 7-.3.3-.6.5-.9.7-.1 0-.2.2-.3.3 0 0-.1 0-.1.1l-2.1 1.5c-1.4 1-2.9 2-4.4 2.9-2.9 1.8-5.9 3.4-9.1 4.8-.2.1-.4.2-.5.2h-.1c-.4.2-.9.4-1.3.5-.9.4-1.8.7-2.8 1-1.1.4-2.2.7-3.3 1.1l1.7 10.1zM129.9 250.1c-9.6.6-19.2.5-28.7-.5-1.2-.1-2.4-.3-3.7-.4-.6-.1-1.1-.1-1.7-.2-.1 0-1-.1-1.1-.2-1.9-.3-3.8-.6-5.6-1.1l-1.2-.3L90 251c1.7 2.7 3.1 5.3 4.1 7.8 1.9.2 3.8.4 5.5.6 10.3 1.1 20.7 1.3 31.1.6.2 0 .4 0 .5-.1l-1.3-9.8z"
+							/>
+						</g>
+					</g>
+					<g id="AMHand">
+						<path
+							class="st0"
+							d="M243.3 101.8c0-2.8-.4-5.2-1.6-7.7-.2-.6-.5-1.2-.7-1.8.2-.4.5-.8.7-1.2 1.6-3.6.9-7.4-1.7-8.6-.6-.3-1.3-.4-1.9-.3 1.1-3.1.6-6.3-1.6-7.8-2-1.4-4.9-.9-7.4 1-.1-2.9-1.4-5.3-3.6-6-3-1-6.4 1.3-8.1 5.2-1-3.5-3.5-5.9-6.2-5.7-3.3.2-5.8 4.2-5.4 8.9.1 1.7.6 3.2 1.3 4.5-2.3-.9-4.6-.8-6.3.4-3.3 2.4-3.1 8.2.4 12.9.8 1 1.6 1.9 2.5 2.7-.1.9-.3 1.8-.3 2.7-.1 2 .2 3.9-.2 5.8-.5 2.3-1 4.7-2 6.8-1.2 2.6-2.7 5.2-4.5 7.5-2.1 2.5-4.4 4.9-7 6.8-3 2.2-6.3 4-9.7 5.3-5 2-10.3 2.9-15.5 3.7-1.3.2-2.6.2-4 .1-11.5 10-9.5 26.4.6 36 5.5 6.8 18.4 8.3 24.1.9 0-.1-.1-.3-.1-.4.2-.1.4-.1.6-.2.1-.2.3-.4.4-.7-.1.2-.3.4-.4.7 5.4-1.7 10.8-3.7 15.9-6.2 5.9-3 11.5-6.7 16.5-11s9.1-9 13-14.4c4.2-5.8 7.1-12.2 9.4-18.9 1.4-4.2 1.9-8.4 2.6-12.7.2-2.8.2-5.5.2-8.3z"
+						/>
+						<path
+							class="st1"
+							d="M179.9 133.1c-1.5.6-3 1.1-4.5 1.5 3.6 15.3 10.4 27 18.2 35.8 2.6-1 5.3-2.1 7.8-3.4.3-.2.6-.3.9-.5-8-8.4-15-19.8-18.4-35.3-1.3.7-2.6 1.3-4 1.9z"
+						/>
+						<path
+							class="st2"
+							d="M222.9 140.2c-7.7 8.2-16.9 13.8-27.3 18-5.6 2.3-11.4 3.9-17.2 5.6l.6.9c1.4 1.7 2.8 3.3 3.9 5.2.7 1.2 1.4 2.3 2 3.5 5.6-1.7 11.2-3.7 16.5-6.4 5.9-3 11.5-6.7 16.5-11s9.1-9 13-14.4c4.2-5.8 7.1-12.2 9.4-18.9 1.4-4 1.9-8.1 2.5-12.2-4.6 11-11.6 20.9-19.9 29.7z"
+						/>
+						<path
+							class="st5"
+							d="M195.5 158.2c-2.9 1.2-5.8 2.2-8.8 3.1 2.1 3.3 4.5 6.4 6.9 9.1.6-.3 1.3-.5 1.9-.8.6-.3 1.3-.5 1.9-.8.2-.1.3-.1.5-.2.5-.2 1-.4 1.5-.7.6-.3 1.3-.6 1.9-.9.1 0 .1-.1.2-.1.2-.1.5-.3.7-.4-2.2-2.5-4.6-5.3-6.7-8.3z"
+						/>
+					</g>
+					<g id="AMHead">
+						<path
+							class="st4"
+							d="M184.7 74c9.2 41.1-17.2 73.2-56.8 82.1-39.6 8.9-77.2-8.8-86.5-49.8s15.4-81.6 54.9-90.5 79.2 17.1 88.4 58.2z"
+						/>
+						<path
+							class="st0"
+							d="M186.2 63.1c9.7 43.2-18.1 77-59.8 86.3s-81.3-9.2-91-52.4S51.6 11.2 93.2 1.8s83.3 18.1 93 61.3z"
+						/>
+						<path
+							class="st1"
+							d="M176.3 66.4c7.5 33.4-18.8 53-54.8 61.1s-68.2 1.6-75.7-31.8 15.6-67 51.7-75.1 71.3 12.5 78.8 45.8z"
+						/>
+						<path
+							class="st4"
+							d="M174.6 58.8c7.5 33.4-18.8 53-54.8 61.1s-68.2 1.6-75.7-31.8 15.6-67 51.7-75.1 71.3 12.4 78.8 45.8z"
+						/>
+						<path
+							class="st7"
+							d="M133.4 28c.8-2.3-.4-4.9-2.7-5.8-10.2-3.7-21.7-4.6-33.4-2-13.3 3-24.6 10.2-32.5 19.7-1.6 1.9-1.4 4.7.5 6.3 1.9 1.7 4.9 1.5 6.5-.5 6.7-8 16.2-14 27.5-16.6 9.9-2.2 19.6-1.4 28.3 1.7 2.4.8 5-.4 5.8-2.8z"
+						/>
+						<circle
+							transform="rotate(-12.674 61.054 57.566)"
+							class="st7"
+							cx="61"
+							cy="57.6"
+							r="5.4"
+						/>
+					</g>
+				</svg>
+
+				<div class="astro-bubble">
+					<span> </span>
+				</div>
+			</div>
+
+			<h3 class="my-text bold">
+				Hi, welcome to my portfolio page. 🙂 My main fields of interest are
+				UX/UI design and frontend development.
+			</h3>
+			<p class="my-text bold">If you want to find out more, scroll down.</p>
+
+			<div class="arrow-go-down">
+				<a href="#skills" aria-label="Go down to skills section">
+					<svg
+						width="100%"
+						data-name="see more arrow"
+						xmlns="http://www.w3.org/2000/svg"
+						viewbox="0 0 184.911 111.967"
+					>
+						<path
+							class="arrow-path"
+							d="M183.816 18.27L166.974 1.428a3.737 3.737 0 00-5.286 0L94.216 68.9a2.255 2.255 0 01-3.188 0L23.223 1.1a3.737 3.737 0 00-5.286 0L1.1 17.937a3.737 3.737 0 000 5.286L87.87 110a6.718 6.718 0 009.5 0l86.443-86.442a3.737 3.737 0 00.003-5.288z"
+						/>
+					</svg>
+				</a>
+			</div>
+		</section>
+
+		<div class="section-after"></div>
+
+		<!-- SKILLS SECTION START -->
+		<section class="section-even section" id="skills">
+			<h2>Skills</h2>
+
+			<hr class="custom" />
+
+			<p class="my-text">
+				My goal is to always learn more and to constantly improve.
+			</p>
+
+			<p class="quote">
+				“Learn as though you would never be able to master it; hold it as though
+				you would be in fear of losing it.”
+				<span>Confucius</span>
+			</p>
+
+			<div class="section-container">
+				<div class="planet-frame blue">
+					<div class="planet-frame-top">
+						<span>COMFORTABLE WITH</span>
+					</div>
+					<div class="planet-frame-bottom">
+						<div class="skill-planet">
+							<img src="/imgs/planet-01.svg" alt="blue planet" />
+						</div>
+						<div class="skill-skills">
+							<span>HTML</span>
+							<span>CSS</span>
+							<span>Bootstrap</span>
+							<span>Adobe Illustrator</span>
+							<span>Adobe Photoshop</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="planet-frame green">
+					<div class="planet-frame-top">
+						<span>MEDIUM LEVEL</span>
+					</div>
+					<div class="planet-frame-bottom">
+						<div class="skill-planet">
+							<img src="/imgs/planet-02.svg" alt="green planet" />
+						</div>
+						<div class="skill-skills">
+							<span>JavaScript</span>
+							<span>React</span>
+							<span>jQuery</span>
+							<span>BlazeJS</span>
+							<span>MeteorJS</span>
+							<span>SaSS</span>
+							<span>GIT</span>
+							<span>AJAX</span>
+							<span>AdobeXD</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="planet-frame yellow">
+					<div class="planet-frame-top">
+						<span>STARTED OR BASIC LEVEL</span>
+					</div>
+					<div class="planet-frame-bottom">
+						<div class="skill-planet">
+							<img src="/imgs/planet-03.svg" alt="yellow planet" />
+						</div>
+						<div class="skill-skills">
+							<span>MongoDB</span>
+							<span>Angular 2+</span>
+							<span>Figma</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="planet-frame gray">
+					<div class="planet-frame-top">
+						<span>PLANING TO LEARN</span>
+					</div>
+					<div class="planet-frame-bottom">
+						<div class="skill-planet">
+							<img src="/imgs/planet-04.svg" alt="gray planet" />
+						</div>
+						<div class="skill-skills">
+							<span>Redux</span>
+							<span>TypeScript</span>
+							<span>Express</span>
+							<span>NodeJS</span>
+							<span>Firebase</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- SKILLS SECTION END -->
+		<div class="section-after"></div>
+
+		<!-- PROJECTS SECTION START -->
+		<section class="section" id="projects">
+			<h2>Projects</h2>
+
+			<hr class="custom" />
+
+			<p class="my-text bold">
+				Here you can see some of my projects. More are coming soon.
+			</p>
+
+			<div class="section-container">
+				<div class="project-frame">
+					<div class="project-frame-inside">
+						<div class="project-galery">
+							<img src="/imgs/recipan0.jpg" alt="recipan app screen" />
+						</div>
+						<div class="project-description">
+							<img src="/imgs/astroMan.svg" alt="astronaut" />
+							<div class="project-ingridients">
+								<span>jQuery</span>
+								<span>BlazeJS</span>
+								<span>MeteorJS</span>
+								<span>MongoDB</span>
+							</div>
+							<div class="project-title">
+								<span>reciPan</span>
+							</div>
+							<div class="project-about">
+								<span>· a recipe managment app;</span>
+								<span
+									>· social network features (adding friends and sharing recipes
+									with friends);</span
+								>
+								<span>· frontend and backend in MeteorJS.</span>
+							</div>
+							<div class="project-buttons">
+								<a
+									href="https://recipan.herokuapp.com/"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="btn-standard"
+									>DEMO*</a
+								>
+								<a
+									href="https://github.com/danilo-89/reciPan-recipe-manager-app"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="btn-standard"
+									>GITHUB</a
+								>
+							</div>
+							<div class="project-note">
+								<span> *Please wait about 20 seconds on the first start </span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="project-frame">
+					<div class="project-frame-inside">
+						<div class="project-galery">
+							<img src="/imgs/petitions0.jpg" alt="petitions platform screen" />
+						</div>
+						<div class="project-description">
+							<img src="/imgs/astroMan.svg" alt="astronaut" />
+							<div class="project-ingridients">
+								<span>React</span>
+								<span>Bootstrap</span>
+								<span>MeteorJS</span>
+								<span>MongoDB</span>
+							</div>
+							<div class="project-title">
+								<span>petitions</span>
+							</div>
+							<div class="project-about">
+								<span>· a petitions platform;</span>
+								<span
+									>· registered users can create petitions, everybody can sign
+									them;</span
+								>
+								<span
+									>· sharing petitions via social media and QR codes...</span
+								>
+							</div>
+							<div class="project-buttons">
+								<a
+									href="https://petitions-react.herokuapp.com/"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="btn-standard"
+									>DEMO*</a
+								>
+								<a
+									href="https://github.com/danilo-89/petitions"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="btn-standard"
+									>GITHUB</a
+								>
+							</div>
+							<div class="project-note">
+								<span> *Please wait about 20 seconds on the first start </span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="project-frame">
+					<div class="project-frame-inside">
+						<div class="project-galery">
+							<img src="/imgs/matchPairs0.jpg" alt="match pairs game screen" />
+						</div>
+						<div class="project-description">
+							<img src="/imgs/astroMan.svg" alt="astronaut" />
+							<div class="project-ingridients">
+								<span>HTML</span>
+								<span>CSS</span>
+								<span>JavaScript</span>
+							</div>
+							<div class="project-title">
+								<span>Memory Card Game - Match Pairs</span>
+							</div>
+							<div class="project-about">
+								<span>· simple game of memory;</span>
+								<span>· completely in HTML, CSS and vanilla JavaScript;</span>
+								<span>· responsive design.</span>
+							</div>
+							<div class="project-buttons">
+								<a
+									href="https://match-pairs.vercel.app/"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="btn-standard"
+									>DEMO</a
+								>
+								<a
+									href="https://github.com/danilo-89/Memory-Card-Game---Match-Pairs"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="btn-standard"
+									>GITHUB</a
+								>
+							</div>
+							<div class="project-note">
+								<span> </span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="project-frame"></div>
+
+				<div class="project-frame"></div>
+
+				<div class="project-frame"></div>
+			</div>
+		</section>
+		<!-- PROJECTS SECTION END -->
+		<div class="section-after"></div>
+
+		<!-- CONTACT SECTION START -->
+		<section class="section section-even" id="contact">
+			<h2>Contact</h2>
+
+			<hr class="custom" />
+
+			<p class="my-text">
+				Here you can get more info about me.
+				<br />
+				If you have any questions or work offer, feel free to contact me.
+			</p>
+
+			<div class="contact-buttons">
+				<a
+					href="https://danilo-89.github.io/CV/cv_2021.pdf"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="btn-standard cv-download"
+					>CV Download</a
+				>
+			</div>
+
+			<div class="astro-cat-container">
+				<img src="/imgs/astroCat.svg" alt="astronaut cat" />
+			</div>
+
+			<div class="contact-buttons">
+				<a
+					class="cryptedmail btn-standard email"
+					href="#"
+					data-name="danilo89abcd"
+					data-domain="gmail"
+					data-tld="com"
+					onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;"
+					>Email me</a
+				>
+
+				<a
+					href="https://github.com/danilo-89"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="btn-standard github"
+					>GitHub</a
+				>
+
+				<a
+					href="https://www.linkedin.com/in/danilo-bozinovic/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="btn-standard linkedin"
+					>LinkedIn</a
+				>
+
+				<a
+					href="https://www.codewars.com/users/danilo-89"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="codewars-container"
+				>
+					<div class="codewars-header">
+						<span class="span-custom">danilo-89</span>
+						<span class="span-custom text-bold">Codewars</span>
+					</div>
+					<div class="codewars-content">
+						<div>
+							<span class="span-custom">
+								<span class="text-bold text-gray">Rank: </span>
+								<span id="CWRank"></span>
+							</span>
+							<span class="span-custom">JavaScript</span>
+						</div>
+						<div>
+							<span class="span-custom">
+								<span class="text-gray text-bold">Honor: </span>
+								<span id="CWHonor"></span>
+							</span>
+							<span class="span-custom span-cata">
+								<span class="text-gray text-bold">Completed Kata: </span>
+								<span id="CWKata"></span>
+							</span>
+						</div>
+					</div>
+				</a>
+			</div>
+		</section>
+		<!-- CONTACT SECTION END -->
+
+		<script src="/script/main.js"></script>
+	</body>
 </html>
